@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>ToysCreation - ToysCreation.Inc morita</title><link href="https://www.toyscreation.jp/" rel="alternate"></link><link href="https://www.toyscreation.jp/feeds/toyscreationinc-morita.atom.xml" rel="self"></link><id>https://www.toyscreation.jp/</id><updated>2019-01-02T00:00:00+09:00</updated><entry><title>[Python] PelicanとGithub Pagesで作成したブログを独自ドメインとHTTPS対応</title><link href="https://www.toyscreation.jp/pelican_in_own_domain.md.html" rel="alternate"></link><published>2019-01-02T00:00:00+09:00</published><updated>2019-01-02T00:00:00+09:00</updated><author><name>ToysCreation.Inc morita</name></author><id>tag:www.toyscreation.jp,2019-01-02:/pelican_in_own_domain.md.html</id><summary type="html">&lt;p&gt;[Python] PelicanとGithub Pagesで作成したブログを独自ドメインとHTTPS対応&lt;/p&gt;</summary><content type="html">&lt;!--
+Pythonインストール・設定がまだの方は[Pythonインストール・設定]()を参照。
+--&gt;
+
+&lt;p&gt;PelicanとGithub Pagesでブログ作成がまだの方は&lt;a href="/pelican_in_githubio.md.html#pelican_in_githubio.md"&gt;[Python] PelicanとGithub Pagesで簡単ブログ作成&lt;/a&gt;を参照。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DNSレコード設定&lt;/strong&gt;&lt;br&gt;
+toyscreation.jpのドメインはAWSのRoute53で管理しているため、
+Route53にてDNSレコード設定を行います。  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Name&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="n"&gt;www&lt;/span&gt;  
+&lt;span class="n"&gt;Type&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="n"&gt;CNAME&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt; &lt;span class="n"&gt;Canonical&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;  
+&lt;span class="n"&gt;Value&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="n"&gt;morita-toyscreation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="route53" src="../images/pelican_in_own_domain/route53.png" title="route53"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GitHub Pages設定&lt;/strong&gt;
+対象ブランチのSettingsにてGitHub Pages設定を行います。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Custom&lt;/span&gt; &lt;span class="n"&gt;domain&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toyscreation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jp&lt;/span&gt;
+&lt;span class="n"&gt;Enforce&lt;/span&gt; &lt;span class="n"&gt;HTTPS&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="n"&gt;チェック&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="settings" src="../images/pelican_in_own_domain/settings.png" title="settings"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;独自ドメインとHTTPS対応完了&lt;/strong&gt;&lt;br&gt;
+ブラウザでサイトを確認&lt;br&gt;
+https://www.toyscreation.jp&lt;/p&gt;</content><category term="トイズクリエイション"></category><category term="ToysCreation"></category><category term="Python"></category><category term="Pelican"></category><category term="GitHub"></category></entry><entry><title>[Python] PelicanとGithub Pagesで簡単ブログ作成</title><link href="https://www.toyscreation.jp/pelican_in_githubio.md.html" rel="alternate"></link><published>2019-01-01T00:00:00+09:00</published><updated>2019-01-01T00:00:00+09:00</updated><author><name>ToysCreation.Inc morita</name></author><id>tag:www.toyscreation.jp,2019-01-01:/pelican_in_githubio.md.html</id><summary type="html">&lt;p&gt;[Python] PelicanとGithub Pagesで簡単ブログ作成&lt;/p&gt;</summary><content type="html">&lt;!--
+Pythonインストール・設定がまだの場合は[Pythonインストール・設定]()を行います。
+--&gt;
+
+&lt;p&gt;&lt;strong&gt;ディレクトリを作成&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="n"&gt;morita-toyscreation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;
+&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;morita-toyscreation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;virtualenv設定&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;pyenv&lt;/span&gt; &lt;span class="n"&gt;virtualenv&lt;/span&gt; &lt;span class="n"&gt;3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;6&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;3&lt;/span&gt; &lt;span class="n"&gt;morita-toyscreation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;
+&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;pyenv&lt;/span&gt; &lt;span class="n"&gt;local&lt;/span&gt; &lt;span class="n"&gt;morita-toyscreation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;
+&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-upgrade&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt;
+&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-upgrade&lt;/span&gt; &lt;span class="n"&gt;setuptools&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;pipインストール&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;
+&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;ghp-import&lt;/span&gt;
+&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;Markdown&lt;/span&gt;
+&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;typogrify&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;githubにてmorita-toyscreation.github.ioブランチを作成&lt;/strong&gt;
+&lt;img alt="github-new" src="../images/pelican_in_github_io/github-new.png" title="github-new"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;pelican クイックスタート&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;pelican-quickstart&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;pelican 初期設定&lt;/strong&gt;
+※ 下記はローカルで確認だけに設定&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Where&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;create&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;web&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="p"&gt;[.]&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;web&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="n"&gt;Toyscreation&lt;/span&gt; &lt;span class="n"&gt;Blog&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Who&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;author&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;web&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="n"&gt;morita-toyscreation&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="n"&gt;language&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;web&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="no"&gt;[ja]&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;specify&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;URL&lt;/span&gt; &lt;span class="n"&gt;prefix&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.,&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="p"&gt;//&lt;/span&gt;&lt;span class="n"&gt;example&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;   &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;Y&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;URL&lt;/span&gt; &lt;span class="n"&gt;prefix&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;see&lt;/span&gt; &lt;span class="n"&gt;above&lt;/span&gt; &lt;span class="n"&gt;example&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;trailing&lt;/span&gt; &lt;span class="n"&gt;slash&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="p"&gt;//&lt;/span&gt;&lt;span class="n"&gt;morita-toyscreation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;enable&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt; &lt;span class="n"&gt;pagination&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;Y&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;How&lt;/span&gt; &lt;span class="n"&gt;many&lt;/span&gt; &lt;span class="n"&gt;articles&lt;/span&gt; &lt;span class="n"&gt;per&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;10&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;What&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt; &lt;span class="n"&gt;zone&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Europe&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Paris&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;Asia&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Tokyo&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;generate&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;Fabfile&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Makefile&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;automate&lt;/span&gt; &lt;span class="n"&gt;generation&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;publishing&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;Y&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;an&lt;/span&gt; &lt;span class="n"&gt;auto-reload&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;simpleHTTP&lt;/span&gt; &lt;span class="n"&gt;script&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;assist&lt;/span&gt; &lt;span class="n"&gt;with&lt;/span&gt; &lt;span class="n"&gt;theme&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt; &lt;span class="n"&gt;development&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;Y&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;upload&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;FTP&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;upload&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;SSH&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;upload&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;Dropbox&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;upload&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;S3&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;upload&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;Rackspace&lt;/span&gt; &lt;span class="n"&gt;Cloud&lt;/span&gt; &lt;span class="n"&gt;Files&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;Do&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;upload&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;GitHub&lt;/span&gt; &lt;span class="n"&gt;Pages&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Is&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;personal&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;)?&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+&lt;span class="n"&gt;Done&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;Your&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;project&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;available&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xxxxx&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Sites&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;morita-toyscreation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;ブランチ作成&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt; 
+&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;checkout&lt;/span&gt; &lt;span class="n"&gt;-b&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;記事の作成&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;vi&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;keyboard-review&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;md&lt;/span&gt;
+
+&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="n"&gt;My&lt;/span&gt; &lt;span class="n"&gt;First&lt;/span&gt; &lt;span class="n"&gt;Review&lt;/span&gt;
+&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="n"&gt;2018&lt;/span&gt;&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;03&lt;/span&gt;&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;06&lt;/span&gt; &lt;span class="n"&gt;09&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="n"&gt;00&lt;/span&gt;
+&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Review&lt;/span&gt;
+
+&lt;span class="n"&gt;Following&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;review&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;my&lt;/span&gt; &lt;span class="n"&gt;favorite&lt;/span&gt; &lt;span class="n"&gt;mechanical&lt;/span&gt; &lt;span class="n"&gt;keyboard&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;ローカル確認&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;devserver&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;ブラウザで確認できます。&lt;br&gt;
+http://localhost:8000/&lt;/p&gt;
+&lt;p&gt;開発サーバー停止&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;stopserver&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;MarkdownをHTMLに変換&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="n"&gt;-o&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="n"&gt;-s&lt;/span&gt; &lt;span class="n"&gt;pelicanconf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;pelicanブランチをPush&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt; &lt;span class="n"&gt;-m&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;first web site.&amp;quot;&lt;/span&gt;
+&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Github Pages用デプロイ&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ghp-import&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="n"&gt;-b&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt; &lt;span class="n"&gt;-m&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Published.&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;masterブランチをPush&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;checkout&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
+&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt; &lt;span class="n"&gt;-m&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Published.&amp;quot;&lt;/span&gt;
+&lt;span class="p"&gt;$&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;ブログ作成完了&lt;/strong&gt;&lt;br&gt;
+ブラウザでサイトを確認（少し待つ場合があるみたいです。）&lt;br&gt;
+https://morita-toyscreation.github.io/
+&lt;img alt="localhost-8000" src="../images/pelican_in_github_io/localhost-8000.png" title="localhost-8000"&gt;&lt;/p&gt;</content><category term="トイズクリエイション"></category><category term="ToysCreation"></category><category term="Python"></category><category term="Pelican"></category><category term="GitHub"></category></entry><entry><title>HPを更新しました。</title><link href="https://www.toyscreation.jp/hp-renew.html" rel="alternate"></link><published>2018-03-25T00:00:00+09:00</published><updated>2018-03-25T00:00:00+09:00</updated><author><name>ToysCreation.Inc morita</name></author><id>tag:www.toyscreation.jp,2018-03-25:/hp-renew.html</id><summary type="html">&lt;p&gt;HPを更新しました。&lt;/p&gt;</summary><content type="html">&lt;p&gt;HPを更新しました。Blogは随時更新していきます。&lt;/p&gt;</content><category term="トイズクリエイション"></category><category term="ToysCreation"></category></entry><entry><title>ストーリー型将棋指し育成ゲーム「棋士プロ〜将棋めし編〜」を制作致しました！</title><link href="https://www.toyscreation.jp/kishipro.html" rel="alternate"></link><published>2017-08-10T00:00:00+09:00</published><updated>2018-03-25T00:00:00+09:00</updated><author><name>ToysCreation.Inc morita</name></author><id>tag:www.toyscreation.jp,2017-08-10:/kishipro.html</id><summary type="html">&lt;p&gt;ストーリー型将棋指し育成ゲーム「棋士プロ〜将棋めし編〜」を制作致しました！&lt;/p&gt;</summary><content type="html">&lt;p&gt;ストーリー型将棋指し育成ゲーム「棋士プロ〜将棋めし編〜」を制作致しました！  &lt;/p&gt;
+&lt;p&gt;■　ゲーム概要&lt;br&gt;
+「棋士プロ」はストーリー型の将棋棋士育成ゲーム。主人公は将棋の勉強をしながらイベントをこなし、ゲーム最後に行われる大会での優勝を目指す。&lt;br&gt;
+また育成完了した棋士はユーザ間バトルをすることで競い合うことができる。  &lt;/p&gt;
+&lt;p&gt;■iOS&lt;br&gt;
+&lt;a href="https://appsto.re/jp/u4PFlb.i"&gt;https://appsto.re/jp/u4PFlb.i&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;■Android&lt;br&gt;
+&lt;a href="https://play.google.com/store/apps/details?id=air.kishipro"&gt;https://play.google.com/store/apps/details?id=air.kishipro&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;■　コラボ&lt;br&gt;
+TVドラマも好評放送中の「将棋めし」（著：松本渚／月刊コミックフラッパー連載中／KADOKAWA刊）とコラボ。&lt;br&gt;
+「将棋めし」主人公である「峠なゆた」が先生役として登場。なゆたとの会話を楽しみつつ、主人公の育成を目指す。&lt;br&gt;
+また、ゲーム中回復として漫画内で登場した「将棋めし」をうまく活用することで育成の効率化ができるようになっている。 &lt;/p&gt;
+&lt;!-- イメージ --&gt;
+
+&lt;p&gt;
+&lt;a href="/images/kishipro/1242x2208_1.png" rel="magnific"&gt;
+    &lt;img src="/images/kishipro/1242x2208_1.png" alt="1242x2208_1" width="169" height="300" sizes="(max-width: 169px) 100vw, 169px"&gt;
+&lt;/a&gt;
+&lt;a href="/images/kishipro/1242x2208_2.png" rel="magnific"&gt;
+    &lt;img src="/images/kishipro/1242x2208_2.png" alt="1242x2208_2" width="169" height="300" sizes="(max-width: 169px) 100vw, 169px"&gt;
+&lt;/a&gt;
+&lt;a href="/images/kishipro/1242x2208_3.png" rel="magnific"&gt;
+&lt;img src="/images/kishipro/1242x2208_3.png" alt="1242x2208_3" width="169" height="300" sizes="(max-width: 169px) 100vw, 169px"&gt;
+&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;a href="/images/kishipro/750x1334_4.png" rel="magnific"&gt;
+    &lt;img src="/images/kishipro/750x1334_4.png" alt="750x1334_4" width="169" height="300" sizes="(max-width: 169px) 100vw, 169px"&gt;
+&lt;/a&gt;
+&lt;a href="/images/kishipro/750x1334_5.png" rel="magnific"&gt;
+    &lt;img src="/images/kishipro/750x1334_5.png" alt="750x1334_5" width="169" height="300" sizes="(max-width: 169px) 100vw, 169px"&gt;
+&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;■原作書籍情報&lt;br&gt;
+タイトル：　将棋めし&lt;br&gt;
+著 者：　松本渚&lt;br&gt;
+月刊コミックフラッパー(毎月 5 日発売)にて好評連載中&lt;br&gt;
+価 格：　1 巻 定価:本体600円＋税 　※第 2 巻は 8 月 23 日(水)発売&lt;br&gt;
+発 行：　株式会社KADOKAWA  &lt;/p&gt;
+&lt;p&gt;■ドラマ放送情報&lt;br&gt;
+配信日時：ＦＯＤにて配信中（毎週月曜日更新）&lt;br&gt;
+放送日時：フジテレビ地上波で毎週水曜日26時30分放送中&lt;br&gt;
+出演：　内田理央　上遠野太洸　稲葉友　猫田直　朝倉えりか　清瀬ひかり　伊藤正之　金田明夫 他&lt;br&gt;
+スタッフ：&lt;br&gt;
+　主題歌　クレイジーケンバンド&lt;br&gt;
+　　「流星ドライブ」（SPACE SHOWER NETWORKS INC.）&lt;br&gt;
+　　「地球が一回転する間に」（ユニバーサル シグマ）&lt;br&gt;
+　脚本　児玉頼子　溝井英一デービス&lt;br&gt;
+　企画・プロデュース  清水一幸（フジテレビ）&lt;br&gt;
+　プロデューサー　渋谷英史　小林泰子(The icon)&lt;br&gt;
+　演出　安見悟朗　渋谷英史(The icon)&lt;br&gt;
+制作著作：　フジテレビジョン&lt;br&gt;
+URL：　&lt;a href="http://fod.fujitv.co.jp/s/genre/drama/ser4c47/"&gt;http://fod.fujitv.co.jp/s/genre/drama/ser4c47/&lt;/a&gt;（FOD『将棋めし』配信ページ）  &lt;/p&gt;
+&lt;p&gt;■「棋士プロ〜将棋めし編〜」の概要&lt;br&gt;
+名称　　　   ： 棋士プロ～将棋めし編～&lt;br&gt;
+発売開始日   ： 2017年08月10日&lt;br&gt;
+販売料金　   ： 無料&lt;br&gt;
+対応端末　   ： iPhone、iPod touch および iPad 互換 iOS 5.1.1 以降が必要&lt;br&gt;
+■iOS：&lt;a href="https://appsto.re/jp/u4PFlb.i"&gt;https://appsto.re/jp/u4PFlb.i&lt;/a&gt;&lt;br&gt;
+■Android：&lt;a href="https://play.google.com/store/apps/details?id=air.kishipro"&gt;https://play.google.com/store/apps/details?id=air.kishipro&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;■会社概要&lt;br&gt;
+商号　　    ： 株式会社トイズクリエイション（ToysCreation Inc.）&lt;br&gt;
+所在地　    ： 〒164-0004　東京都新宿区 四谷3-12 丸正総本店ビル5F&lt;br&gt;
+代表者　    ： 代表取締役　森田　学志&lt;br&gt;
+設立　　    ： 2014年8月&lt;br&gt;
+事業内容    ： スマートフォン/ソーシャルゲーム、WEBサービスの自社製品及び受託開発  &lt;br&gt;
+URL　　   ： &lt;a href="http://www.toyscreation.jp/"&gt;http://www.toyscreation.jp/&lt;/a&gt;    &lt;/p&gt;
+&lt;p&gt;【本サービスに関するお客様からのお問い合わせ先】&lt;br&gt;
+株式会社トイズクリエイション（ToysCreation Inc.）&lt;br&gt;
+Tel：050-5242-6956  &lt;/p&gt;
+&lt;p&gt;■　技術情報&lt;br&gt;
+AWS、LAMP、CakePHP3.0、AdobeAIR26.0&lt;br&gt;
+ソーシャルゲームとして基本的な処理、育成時パラメータ、ストーリー、バトル、ランキングは全てサーバサイドでの実装。&lt;br&gt;
+ストーリーは管理画面から更新が可能で、同一スキームでのアプリ作成が容易に行える。  &lt;/p&gt;</content><category term="トイズクリエイション"></category><category term="ToysCreation"></category><category term="棋士プロ〜将棋めし編〜"></category></entry></feed>

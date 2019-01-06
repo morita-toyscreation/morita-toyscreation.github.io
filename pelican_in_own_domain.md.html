@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="./theme/pygments/monokai.min.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://www.toyscreation.jp/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="ToysCreation Atom">
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333">
+
+<meta name="author" content="ToysCreation.Inc morita" />
+<meta name="description" content="[Python] PelicanとGithub Pagesで作成したブログを独自ドメインとHTTPS対応" />
+<meta name="keywords" content="トイズクリエイション, ToysCreation, Python, Pelican, GitHub">
+
+<meta property="og:site_name" content="ToysCreation"/>
+<meta property="og:title" content="[Python] PelicanとGithub Pagesで作成したブログを独自ドメインとHTTPS対応"/>
+<meta property="og:description" content="[Python] PelicanとGithub Pagesで作成したブログを独自ドメインとHTTPS対応"/>
+<meta property="og:locale" content="ja_JP"/>
+<meta property="og:url" content="./pelican_in_own_domain.md.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2019-01-02 00:00:00+09:00"/>
+<meta property="article:modified_time" content="2019-01-02 00:00:00+09:00"/>
+<meta property="article:author" content="./author/toyscreationinc-morita.html">
+<meta property="article:section" content="Tech"/>
+<meta property="article:tag" content="トイズクリエイション"/>
+<meta property="article:tag" content="ToysCreation"/>
+<meta property="article:tag" content="Python"/>
+<meta property="article:tag" content="Pelican"/>
+<meta property="article:tag" content="GitHub"/>
+<meta property="og:image" content="./">
+
+  <title>ToysCreation &ndash; [Python] PelicanとGithub Pagesで作成したブログを独自ドメインとHTTPS対応</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href=".">
+        <img src="/images/toyscreation.png" alt="ToysCreation" title="ToysCreation">
+      </a>
+      <h1><a href=".">ToysCreation</a></h1>
+
+<p>株式会社トイズクリエイション</p>
+      <nav>
+        <ul class="list">
+          <li><a href="./pages/about.html#about">会社概要</a></li>
+          <li><a href="./pages/service.html#service">サービス</a></li>
+          <li><a href="./pages/portfolio.html#portfolio">開発実績</a></li>
+          <li><a href="./pages/contact.html#contact">お問い合わせ</a></li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href=".">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://www.toyscreation.jp/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="pelican_in_own_domain.md">[Python] PelicanとGithub Pagesで作成したブログを独自ドメインとHTTPS対応</h1>
+    <p>
+      Posted on 2019年1月2日 in <a href="./category/tech.html">Tech</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <!--
+Pythonインストール・設定がまだの方は[Pythonインストール・設定]()を参照。
+-->
+
+<p>PelicanとGithub Pagesでブログ作成がまだの方は<a href="/pelican_in_githubio.md.html#pelican_in_githubio.md">[Python] PelicanとGithub Pagesで簡単ブログ作成</a>を参照。</p>
+<p><strong>DNSレコード設定</strong><br>
+toyscreation.jpのドメインはAWSのRoute53で管理しているため、
+Route53にてDNSレコード設定を行います。  </p>
+<div class="highlight"><pre><span></span><span class="n">Name</span><span class="err">:</span> <span class="n">www</span>  
+<span class="n">Type</span><span class="err">:</span> <span class="n">CNAME</span> <span class="p">-</span> <span class="n">Canonical</span> <span class="n">name</span>  
+<span class="n">Value</span><span class="err">:</span> <span class="n">morita-toyscreation</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span>
+</pre></div>
+
+
+<p><img alt="route53" src="../images/pelican_in_own_domain/route53.png" title="route53"></p>
+<p><strong>GitHub Pages設定</strong>
+対象ブランチのSettingsにてGitHub Pages設定を行います。</p>
+<div class="highlight"><pre><span></span><span class="n">Custom</span> <span class="n">domain</span><span class="err">:</span> <span class="n">www</span><span class="p">.</span><span class="n">toyscreation</span><span class="p">.</span><span class="n">jp</span>
+<span class="n">Enforce</span> <span class="n">HTTPS</span><span class="err">:</span> <span class="n">チェック</span>
+</pre></div>
+
+
+<p><img alt="settings" src="../images/pelican_in_own_domain/settings.png" title="settings"></p>
+<p><strong>独自ドメインとHTTPS対応完了</strong><br>
+ブラウザでサイトを確認<br>
+https://www.toyscreation.jp</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/toizukurieishiyon.html">トイズクリエイション</a>
+      <a href="./tag/toyscreation.html">ToysCreation</a>
+      <a href="./tag/python.html">Python</a>
+      <a href="./tag/pelican.html">Pelican</a>
+      <a href="./tag/github.html">GitHub</a>
+    </p>
+  </div>
+
+  <div class="center social-share">
+    <p>この記事を友達にシェア！</p>
+    <div class="addthis_native_toolbox"></div>
+    <div class="addthis_sharing_toolbox"></div>
+    <div class="addthis_inline_share_toolbox"></div>
+  </div>
+
+
+    <div class="addthis_relatedposts_inline"></div>
+
+
+</article>
+
+    <footer>
+<p>&copy;  2014-2019</p>
+<p>Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aae0f0fc99eb630" async="async"></script>
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " ToysCreation ",
+  "url" : ".",
+  "image": "/images/toyscreation.png",
+  "description": "ToysCreation.Inc's 株式会社トイズクリエイションはWEBサイト、スマートフォン、ソーシャルゲームの受託開発・自社製品開発を行う会社です。"
+}
+</script>
+
+</body>
+</html>
