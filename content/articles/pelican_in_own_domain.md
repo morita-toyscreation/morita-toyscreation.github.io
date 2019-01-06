@@ -1,18 +1,15 @@
 Title: [Python] PelicanとGithub Pagesで作成したブログを独自ドメインとHTTPS対応  
-Date: 2019-01-02 00:00  
-Modified: 2019-01-02 00:00  
+Date: 2019-01-03 00:00  
+Modified: 2019-01-03 00:00  
 Category: Tech  
 Tags: トイズクリエイション, ToysCreation, Python, Pelican, GitHub    
-Slug: pelican_in_own_domain.md  
+Slug: pelican_in_own_domain  
 Authors: ToysCreation.Inc morita  
 Summary: [Python] PelicanとGithub Pagesで作成したブログを独自ドメインとHTTPS対応  
 Cover:  
 
-<!--
-Pythonインストール・設定がまだの方は[Pythonインストール・設定]()を参照。
--->
-  
-PelicanとGithub Pagesでブログ作成がまだの方は[[Python] PelicanとGithub Pagesで簡単ブログ作成](/pelican_in_githubio.md.html#pelican_in_githubio.md)を参照。
+Pythonインストール・設定がまだの場合は[[Python] MacにPythonのローカル開発環境を構築](/python_in_local_install.html#python_in_local_install)を参照  
+PelicanとGithub Pagesでブログ作成がまだの方は[[Python] PelicanとGithub Pagesで簡単ブログ作成](/pelican_in_githubio.html#pelican_in_githubio)を参照。
 
 **DNSレコード設定**  
 toyscreation.jpのドメインはAWSのRoute53で管理しているため、

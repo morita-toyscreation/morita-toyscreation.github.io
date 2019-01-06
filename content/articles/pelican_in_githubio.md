@@ -1,16 +1,14 @@
 Title: [Python] PelicanとGithub Pagesで簡単ブログ作成  
-Date: 2019-01-01 00:00  
-Modified: 2019-01-01 00:00  
+Date: 2019-01-02 00:00  
+Modified: 2019-01-02 00:00  
 Category: Tech  
 Tags: トイズクリエイション, ToysCreation, Python, Pelican, GitHub  
-Slug: pelican_in_githubio.md  
+Slug: pelican_in_githubio  
 Authors: ToysCreation.Inc morita  
 Summary: [Python] PelicanとGithub Pagesで簡単ブログ作成  
 Cover:  
 
-<!--
-Pythonインストール・設定がまだの場合は[Pythonインストール・設定]()を行います。
--->
+Pythonインストール・設定がまだの場合は[[Python] MacにPythonのローカル開発環境を構築](/python_in_local_install.html#python_in_local_install)を参照  
 
 **ディレクトリを作成**
 ```ps1

@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.toyscreation.jp/</loc>
-<lastmod>2019-01-06T15:30:41-00:00</lastmod>
+<lastmod>2019-01-06T17:21:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/archives.html</loc>
-<lastmod>2019-01-06T15:30:41-00:00</lastmod>
+<lastmod>2019-01-06T17:21:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/tags.html</loc>
-<lastmod>2019-01-06T15:30:41-00:00</lastmod>
+<lastmod>2019-01-06T17:21:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/categories.html</loc>
-<lastmod>2019-01-06T15:30:41-00:00</lastmod>
+<lastmod>2019-01-06T17:21:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -60,14 +60,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://www.toyscreation.jp/pelican_in_own_domain.md.html</loc>
+<loc>https://www.toyscreation.jp/pelican_in_own_domain.html</loc>
+<lastmod>2019-01-03T00:00:00+09:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://www.toyscreation.jp/pelican_in_githubio.html</loc>
 <lastmod>2019-01-02T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://www.toyscreation.jp/pelican_in_githubio.md.html</loc>
+<loc>https://www.toyscreation.jp/python_in_local_install.html</loc>
 <lastmod>2019-01-01T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -103,42 +110,49 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.toyscreation.jp/category/tech.html</loc>
-<lastmod>2019-01-02T00:00:00+09:19</lastmod>
+<lastmod>2019-01-03T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/tag/toizukurieishiyon.html</loc>
-<lastmod>2019-01-02T00:00:00+09:19</lastmod>
+<lastmod>2019-01-03T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/tag/toyscreation.html</loc>
-<lastmod>2019-01-02T00:00:00+09:19</lastmod>
+<lastmod>2019-01-03T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/tag/python.html</loc>
-<lastmod>2019-01-02T00:00:00+09:19</lastmod>
+<lastmod>2019-01-03T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/tag/pelican.html</loc>
-<lastmod>2019-01-02T00:00:00+09:19</lastmod>
+<lastmod>2019-01-03T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/tag/github.html</loc>
-<lastmod>2019-01-02T00:00:00+09:19</lastmod>
+<lastmod>2019-01-03T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://www.toyscreation.jp/tag/rokarukai-fa-huan-jing.html</loc>
+<lastmod>2019-01-01T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -152,7 +166,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.toyscreation.jp/author/toyscreationinc-morita.html</loc>
-<lastmod>2019-01-02T00:00:00+09:19</lastmod>
+<lastmod>2019-01-03T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
