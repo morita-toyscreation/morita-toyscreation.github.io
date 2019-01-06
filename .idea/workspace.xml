@@ -2,41 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d540e73f-f3e5-4175-b996-dd0446ebc2d8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/content/keyboard-review.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/archives.html" afterPath="$PROJECT_DIR$/output/archives.html" />
-      <change beforePath="$PROJECT_DIR$/output/author/morita-toyscreation.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/authors.html" afterPath="$PROJECT_DIR$/output/authors.html" />
-      <change beforePath="$PROJECT_DIR$/output/categories.html" afterPath="$PROJECT_DIR$/output/categories.html" />
-      <change beforePath="$PROJECT_DIR$/output/category/review.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/index.html" afterPath="$PROJECT_DIR$/output/index.html" />
-      <change beforePath="$PROJECT_DIR$/output/my-first-review.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/tags.html" afterPath="$PROJECT_DIR$/output/tags.html" />
-      <change beforePath="$PROJECT_DIR$/output/theme/css/main.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/css/pygment.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/css/reset.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/css/typogrify.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/css/wide.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/aboutme.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/bitbucket.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/delicious.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/facebook.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/github.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/gitorious.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/gittip.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/google-groups.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/google-plus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/hackernews.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/lastfm.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/linkedin.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/reddit.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/rss.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/slideshare.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/speakerdeck.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/stackoverflow.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/twitter.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/vimeo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/output/theme/images/icons/youtube.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pelicanconf.py" afterPath="$PROJECT_DIR$/pelicanconf.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/themes/flex" afterPath="$PROJECT_DIR$/themes/flex" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,8 +18,8 @@
         <entry file="file://$PROJECT_DIR$/content/articles/pelican_in_githubio.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="354">
-                <caret line="106" column="11" lean-forward="true" selection-start-line="106" selection-start-column="2" selection-end-line="106" selection-end-column="11" />
+              <first_editor relative-caret-position="549">
+                <caret line="119" column="11" lean-forward="true" selection-start-line="119" selection-start-column="2" selection-end-line="119" selection-end-column="11" />
                 <folding>
                   <marker date="1546756140679" expanded="true" signature="482:643" ph="$ pyenv virtualenv 3.6...tools" />
                 </folding>
@@ -93,7 +60,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="600">
-                <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+                <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -268,7 +235,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="600">
-            <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -278,8 +245,8 @@
     <entry file="file://$PROJECT_DIR$/content/articles/pelican_in_githubio.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="354">
-            <caret line="106" column="11" lean-forward="true" selection-start-line="106" selection-start-column="2" selection-end-line="106" selection-end-column="11" />
+          <first_editor relative-caret-position="549">
+            <caret line="119" column="11" lean-forward="true" selection-start-line="119" selection-start-column="2" selection-end-line="119" selection-end-column="11" />
             <folding>
               <marker date="1546756140679" expanded="true" signature="482:643" ph="$ pyenv virtualenv 3.6...tools" />
             </folding>
