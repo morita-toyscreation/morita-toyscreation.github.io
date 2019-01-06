@@ -18,8 +18,8 @@
         <entry file="file://$PROJECT_DIR$/content/articles/pelican_in_githubio.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="549">
-                <caret line="119" column="11" lean-forward="true" selection-start-line="119" selection-start-column="2" selection-end-line="119" selection-end-column="11" />
+              <first_editor relative-caret-position="264">
+                <caret line="100" column="6" lean-forward="true" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
                 <folding>
                   <marker date="1546756140679" expanded="true" signature="482:643" ph="$ pyenv virtualenv 3.6...tools" />
                 </folding>
@@ -122,17 +122,6 @@
             <path>
               <item name="morita-toyscreation.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="morita-toyscreation.github.io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="morita-toyscreation.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="morita-toyscreation.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="morita-toyscreation.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="morita-toyscreation.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="articles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -245,8 +234,8 @@
     <entry file="file://$PROJECT_DIR$/content/articles/pelican_in_githubio.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="549">
-            <caret line="119" column="11" lean-forward="true" selection-start-line="119" selection-start-column="2" selection-end-line="119" selection-end-column="11" />
+          <first_editor relative-caret-position="264">
+            <caret line="100" column="6" lean-forward="true" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
             <folding>
               <marker date="1546756140679" expanded="true" signature="482:643" ph="$ pyenv virtualenv 3.6...tools" />
             </folding>
