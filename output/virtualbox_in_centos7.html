@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="./theme/pygments/monokai.min.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://www.toyscreation.jp/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="ToysCreation Atom">
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333">
+
+<meta name="author" content="ToysCreation.Inc morita" />
+<meta name="description" content="VirtualBox in CentOS7構築" />
+<meta name="keywords" content="トイズクリエイション, ToysCreation, VirtualBox, CentOS7">
+
+<meta property="og:site_name" content="ToysCreation"/>
+<meta property="og:title" content="VirtualBox in CentOS7構築"/>
+<meta property="og:description" content="VirtualBox in CentOS7構築"/>
+<meta property="og:locale" content="ja_JP"/>
+<meta property="og:url" content="./virtualbox_in_centos7.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2016-02-01 00:00:00+09:00"/>
+<meta property="article:modified_time" content="2016-02-01 00:00:00+09:00"/>
+<meta property="article:author" content="./author/toyscreationinc-morita.html">
+<meta property="article:section" content="Tech"/>
+<meta property="article:tag" content="トイズクリエイション"/>
+<meta property="article:tag" content="ToysCreation"/>
+<meta property="article:tag" content="VirtualBox"/>
+<meta property="article:tag" content="CentOS7"/>
+<meta property="og:image" content="./">
+
+  <title>ToysCreation &ndash; VirtualBox in CentOS7構築</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href=".">
+        <img src="/images/toyscreation.png" alt="ToysCreation" title="ToysCreation">
+      </a>
+      <h1><a href=".">ToysCreation</a></h1>
+
+<p>株式会社トイズクリエイション</p>
+      <nav>
+        <ul class="list">
+          <li><a href="./pages/about.html#about">会社概要</a></li>
+          <li><a href="./pages/service.html#service">サービス</a></li>
+          <li><a href="./pages/portfolio.html#portfolio">開発実績</a></li>
+          <li><a href="./pages/contact.html#contact">お問い合わせ</a></li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href=".">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://www.toyscreation.jp/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="virtualbox_in_centos7">VirtualBox in CentOS7構築</h1>
+    <p>
+      Posted on 2016年2月1日 in <a href="./category/tech.html">Tech</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>メモ：</p>
+<p>VirtualBoxインストール
+http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html?ssSourceSiteId=otnjp
+各OSのVirtualBoxを選択、インストールはdmgとpkgをクリックしていけば完了します。</p>
+<p>弊社では開発環境にVirtualBoxを利用しています。<br>
+普段はVagrantにて構築することが多いですが、<br>
+基本に帰るということで今回はisoイメージより最新のCentOS7のインストール手順を掲載します。  </p>
+<ol>
+<li>
+<p>CentOS7イメージをダウンロード<br>
+サーバー用途なのでミニマルをインストール<br>
+<a href="https://wiki.centos.org/Download">https://wiki.centos.org/Download</a>  </p>
+</li>
+<li>
+<p>VirtualBoxより新規をクリック画面の流れのまま進んでいきます。<br>
+完了後、左に新規マシンが追加されます。<br>
+設定・ネットワーク設定をクリック、割り当てをブリッジアダプターに変更しOKをクリックします。  </p>
+</li>
+<li>
+<p>VirtualBox起動<br>
+起動をクリックしディスク選択に先ほどダウンロードしたisoを選択してください。  </p>
+</li>
+<li>
+<p>インストール設定<br>
+画面のままで大丈夫です。言語「日本語選択」キーボード「US」など自分環境下に合わせて設定を行います。<br /><br>
+各設定の細かい内容は省略しますが、以下2点は必ず行います。  </p>
+<ol>
+<li>デバイスを選択、そのまま完了をクリックします。  </li>
+<li>ネットワークを選択、イーサーネットをONにして完了をクリックします。<br>
+設定を完了しインストール開始をクリックにてインストールが開始されます。<br>
+インストール中にユーザー作成などができますので、状況に応じて作成します。  </li>
+</ol>
+</li>
+<li>
+<p>インストール後、再起動が求められるので再起動をクリック<br>
+黒い画面が立ち上がりますので、設定したユーザー名・パスワードにてログインすることを確認します。  </p>
+</li>
+<li>
+<p>ネットワーク確認<br>
+コマンドにて ip aaddr を入力 enp0s3 inetに表示されたIPが仮想マシン接続IPになります。<br>
+ためしに、PCないターミナルにてSSHし接続できるか試してみてください。  </p>
+</li>
+</ol>
+<p>いかがでしょうか？<br>
+このようにVirtualBoxとCentOS7を使えば簡単に仮想マシン内にCentOSを立ち上げることができました。<br>
+次回はこの仮想マシン内にNginx・PHPを入れていきたいと思います。  </p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/toizukurieishiyon.html">トイズクリエイション</a>
+      <a href="./tag/toyscreation.html">ToysCreation</a>
+      <a href="./tag/virtualbox.html">VirtualBox</a>
+      <a href="./tag/centos7.html">CentOS7</a>
+    </p>
+  </div>
+
+  <div class="center social-share">
+    <p>この記事を友達にシェア！</p>
+    <div class="addthis_native_toolbox"></div>
+    <div class="addthis_sharing_toolbox"></div>
+    <div class="addthis_inline_share_toolbox"></div>
+  </div>
+
+
+    <div class="addthis_relatedposts_inline"></div>
+
+
+</article>
+
+    <footer>
+<p>&copy;  2014-2018</p>
+<p>Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+  </main>
+
+
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aae0f0fc99eb630" async="async"></script>
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " ToysCreation ",
+  "url" : ".",
+  "image": "/images/toyscreation.png",
+  "description": "ToysCreation.Inc's 株式会社トイズクリエイションはスマートフォン、ソーシャルゲームの受託開発・自社製品開発を行う会社です。"
+}
+</script>
+
+</body>
+</html>
