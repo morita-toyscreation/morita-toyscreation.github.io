@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.toyscreation.jp/</loc>
-<lastmod>2019-01-06T17:26:06-00:00</lastmod>
+<lastmod>2019-01-25T13:16:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/archives.html</loc>
-<lastmod>2019-01-06T17:26:06-00:00</lastmod>
+<lastmod>2019-01-25T13:16:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/tags.html</loc>
-<lastmod>2019-01-06T17:26:06-00:00</lastmod>
+<lastmod>2019-01-25T13:16:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/categories.html</loc>
-<lastmod>2019-01-06T17:26:06-00:00</lastmod>
+<lastmod>2019-01-25T13:16:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -57,6 +57,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <lastmod>2018-03-25T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://www.toyscreation.jp/pm_in_all.html</loc>
+<lastmod>2019-01-19T00:00:00+09:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
 </url>
 
 <url>
@@ -110,21 +117,49 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.toyscreation.jp/category/tech.html</loc>
-<lastmod>2019-01-03T00:00:00+09:19</lastmod>
+<lastmod>2019-01-19T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/tag/toizukurieishiyon.html</loc>
-<lastmod>2019-01-03T00:00:00+09:19</lastmod>
+<lastmod>2019-01-19T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/tag/toyscreation.html</loc>
-<lastmod>2019-01-03T00:00:00+09:19</lastmod>
+<lastmod>2019-01-19T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://www.toyscreation.jp/tag/pm.html</loc>
+<lastmod>2019-01-19T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://www.toyscreation.jp/tag/puroziekutomanezimento.html</loc>
+<lastmod>2019-01-19T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://www.toyscreation.jp/tag/redmine.html</loc>
+<lastmod>2019-01-19T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://www.toyscreation.jp/tag/backlog.html</loc>
+<lastmod>2019-01-19T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -166,7 +201,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.toyscreation.jp/author/toyscreationinc-morita.html</loc>
-<lastmod>2019-01-03T00:00:00+09:19</lastmod>
+<lastmod>2019-01-19T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
