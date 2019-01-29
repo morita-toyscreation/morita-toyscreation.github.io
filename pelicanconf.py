@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'ToysCreation.Inc'
 SITEURL = 'https://www.toyscreation.jp'
 RELATIVE_URLS = True
-SITENAME = '株式会社トイズクリエイション（ToysCreation.Inc）'
+SITENAME = 'ToysCreation.Inc'
 SITETITLE = SITENAME
 SITESUBTITLE = '株式会社トイズクリエイション'
 SITEDESCRIPTION = '%s\'s 株式会社トイズクリエイションはWEBサイト、スマートフォン、ソーシャルゲームの受託開発・自社製品開発を行う会社です。' % AUTHOR
