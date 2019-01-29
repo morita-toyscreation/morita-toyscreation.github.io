@@ -1,9 +1,0 @@
-.idea
-*.pyc
-*.log
-cache
-*.pid
-venv
-.venv
-.ropeproject
-__pycache__
