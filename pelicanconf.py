@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'ToysCreation.Inc'
 SITEURL = 'https://www.toyscreation.jp'
 RELATIVE_URLS = True
-SITENAME = 'ToysCreation'
+SITENAME = '株式会社トイズクリエイション（ToysCreation.Inc）'
 SITETITLE = SITENAME
 SITESUBTITLE = '株式会社トイズクリエイション'
 SITEDESCRIPTION = '%s\'s 株式会社トイズクリエイションはWEBサイト、スマートフォン、ソーシャルゲームの受託開発・自社製品開発を行う会社です。' % AUTHOR
@@ -65,8 +65,7 @@ MENUITEMS = (('Archives', '/archives.html'),
 
 # DISQUS_SITENAME = ''
 ADD_THIS_ID = 'ra-5aae0f0fc99eb630'
-
-# GOOGLE_ANALYTICS = ''
+GOOGLE_ANALYTICS = 'UA-55971269-1'
 # GOOGLE_TAG_MANAGER = ''
 # STATUSCAKE = { 'trackid': 'your-id', 'days': 7, 'design': 6, 'rumid': 1234 }
 
