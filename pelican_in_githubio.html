@@ -8,15 +8,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
 
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
-
-  <link rel="stylesheet" type="text/css" href="./theme/pygments/monokai.min.css">
-  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://morita-toyscreation.github.io/theme/stylesheet/style.min.css">
 
 
-    <link href="https://www.toyscreation.jp/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="ToysCreation.Inc Atom">
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://morita-toyscreation.github.io/theme/pygments/monokai.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://morita-toyscreation.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://morita-toyscreation.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://morita-toyscreation.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://morita-toyscreation.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://morita-toyscreation.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="ToysCreation Atom">
 
 
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
@@ -47,41 +54,68 @@
 <meta name="description" content="[Python] PelicanとGithub Pagesで簡単ブログ作成" />
 <meta name="keywords" content="トイズクリエイション, ToysCreation, Python, Pelican, GitHub">
 
-<meta property="og:site_name" content="ToysCreation.Inc"/>
+
+<meta property="og:site_name" content="ToysCreation"/>
 <meta property="og:title" content="[Python] PelicanとGithub Pagesで簡単ブログ作成"/>
 <meta property="og:description" content="[Python] PelicanとGithub Pagesで簡単ブログ作成"/>
 <meta property="og:locale" content="ja_JP"/>
-<meta property="og:url" content="./pelican_in_githubio.html"/>
+<meta property="og:url" content="https://morita-toyscreation.github.io/pelican_in_githubio.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2019-01-02 00:00:00+09:00"/>
 <meta property="article:modified_time" content="2019-01-02 00:00:00+09:00"/>
-<meta property="article:author" content="./author/toyscreationinc-morita.html">
+<meta property="article:author" content="https://morita-toyscreation.github.io/author/toyscreationinc-morita.html">
 <meta property="article:section" content="Tech"/>
 <meta property="article:tag" content="トイズクリエイション"/>
 <meta property="article:tag" content="ToysCreation"/>
 <meta property="article:tag" content="Python"/>
 <meta property="article:tag" content="Pelican"/>
 <meta property="article:tag" content="GitHub"/>
-<meta property="og:image" content="./">
+<meta property="og:image" content="https://morita-toyscreation.github.io/">
 
-  <title>ToysCreation.Inc &ndash; [Python] PelicanとGithub Pagesで簡単ブログ作成</title>
+  <title>ToysCreation &ndash; [Python] PelicanとGithub Pagesで簡単ブログ作成</title>
 
 </head>
-<body>
+<body class="light-theme">
   <aside>
     <div>
-      <a href=".">
-        <img src="/images/toyscreation.png" alt="ToysCreation.Inc" title="ToysCreation.Inc">
+      <a href="https://morita-toyscreation.github.io">
+        <img src="/images/toyscreation.png" alt="ToysCreation" title="ToysCreation">
       </a>
-      <h1><a href=".">ToysCreation.Inc</a></h1>
 
-<p>株式会社トイズクリエイション</p>
+      <h1>
+        <a href="https://morita-toyscreation.github.io">ToysCreation</a>
+      </h1>
+
+<p>トイズクリエイション</p>
+
       <nav>
         <ul class="list">
-          <li><a href="./pages/about.html#about">会社概要</a></li>
-          <li><a href="./pages/service.html#service">サービス</a></li>
-          <li><a href="./pages/portfolio.html#portfolio">開発実績</a></li>
-          <li><a href="./pages/contact.html#contact">お問い合わせ</a></li>
+
+
+              <li>
+                <a target="_self"
+                   href="https://morita-toyscreation.github.io/pages/about.html#about">
+                  プロフィール
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://morita-toyscreation.github.io/pages/contact.html#contact">
+                  お問い合わせ
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://morita-toyscreation.github.io/pages/portfolio.html#portfolio">
+                  開発実績
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://morita-toyscreation.github.io/pages/service.html#service">
+                  サービス
+                </a>
+              </li>
 
         </ul>
       </nav>
@@ -90,18 +124,17 @@
       </ul>
     </div>
 
-
   </aside>
   <main>
 
     <nav>
-      <a href=".">Home</a>
+      <a href="https://morita-toyscreation.github.io">Home</a>
 
       <a href="/archives.html">Archives</a>
       <a href="/categories.html">Categories</a>
       <a href="/tags.html">Tags</a>
 
-      <a href="https://www.toyscreation.jp/feeds/all.atom.xml">Atom</a>
+      <a href="https://morita-toyscreation.github.io/feeds/all.atom.xml">Atom</a>
 
     </nav>
 
@@ -110,7 +143,7 @@
       
     <h1 id="pelican_in_githubio">[Python] PelicanとGithub Pagesで簡単ブログ作成</h1>
     <p>
-      Posted on 2019年1月2日 in <a href="./category/tech.html">Tech</a>
+      Posted on 2019年1月2日 in <a href="https://morita-toyscreation.github.io/category/tech.html">Tech</a>
 
     </p>
   </header>
@@ -119,37 +152,33 @@
   <div>
     <p>Pythonインストール・設定がまだの場合は<a href="/python_in_local_install.html#python_in_local_install">[Python] MacにPythonのローカル開発環境を構築</a>を参照  </p>
 <p><strong>ディレクトリを作成</strong></p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">mkdir</span> <span class="n">morita-toyscreation</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span>
-<span class="p">$</span> <span class="n">cd</span> <span class="n">morita-toyscreation</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">mkdir</span> <span class="n">morita-toyscreation</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span>
+<span class="p">$</span> <span class="nb">cd </span><span class="n">morita-toyscreation</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span>
+</code></pre></div>
 
 <p><strong>virtualenv設定</strong></p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">pyenv</span> <span class="n">virtualenv</span> <span class="n">3</span><span class="p">.</span><span class="n">6</span><span class="p">.</span><span class="n">3</span> <span class="n">morita-toyscreation</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span>
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">pyenv</span> <span class="n">virtualenv</span> <span class="n">3</span><span class="p">.</span><span class="n">6</span><span class="p">.</span><span class="n">3</span> <span class="n">morita-toyscreation</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span>
 <span class="p">$</span> <span class="n">pyenv</span> <span class="n">local</span> <span class="n">morita-toyscreation</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span>
 <span class="p">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="p">-</span><span class="n">-upgrade</span> <span class="n">pip</span>
 <span class="p">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="p">-</span><span class="n">-upgrade</span> <span class="n">setuptools</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><strong>pipインストール</strong></p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pelican</span>
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pelican</span>
 <span class="p">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">ghp-import</span>
 <span class="p">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">Markdown</span>
 <span class="p">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">typogrify</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><strong>githubにてmorita-toyscreation.github.ioブランチを作成</strong>
 <img alt="github-new" src="../images/pelican_in_github_io/github-new.png" title="github-new"></p>
 <p><strong>pelican クイックスタート</strong></p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">pelican-quickstart</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">pelican-quickstart</span>
+</code></pre></div>
 
 <p><strong>pelican 初期設定</strong>
 ※ 下記はローカルで確認だけに設定</p>
-<div class="highlight"><pre><span></span><span class="p">&gt;</span> <span class="n">Where</span> <span class="k">do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">create</span> <span class="n">your</span> <span class="n">new</span> <span class="n">web</span> <span class="n">site</span><span class="p">?</span> <span class="p">[.]</span>
+<div class="highlight"><pre><span></span><code><span class="p">&gt;</span> <span class="nb">Where </span><span class="k">do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">create</span> <span class="n">your</span> <span class="n">new</span> <span class="n">web</span> <span class="n">site</span><span class="p">?</span> <span class="p">[.]</span>
 <span class="p">&gt;</span> <span class="n">What</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="n">title</span> <span class="n">of</span> <span class="n">this</span> <span class="n">web</span> <span class="n">site</span><span class="p">?</span> <span class="n">Toyscreation</span> <span class="n">Blog</span>
 <span class="p">&gt;</span> <span class="n">Who</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="n">author</span> <span class="n">of</span> <span class="n">this</span> <span class="n">web</span> <span class="n">site</span><span class="p">?</span> <span class="n">morita-toyscreation</span>
 <span class="p">&gt;</span> <span class="n">What</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="k">default</span> <span class="n">language</span> <span class="n">of</span> <span class="n">this</span> <span class="n">web</span> <span class="n">site</span><span class="p">?</span> <span class="no">[ja]</span>
@@ -168,62 +197,53 @@
 <span class="p">&gt;</span> <span class="k">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">upload</span> <span class="n">your</span> <span class="n">website</span> <span class="n">using</span> <span class="n">GitHub</span> <span class="n">Pages</span><span class="p">?</span> <span class="p">(</span><span class="n">y</span><span class="p">/</span><span class="n">N</span><span class="p">)</span> <span class="n">y</span>
 <span class="p">&gt;</span> <span class="n">Is</span> <span class="n">this</span> <span class="n">your</span> <span class="n">personal</span> <span class="n">page</span> <span class="p">(</span><span class="n">username</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">)?</span> <span class="p">(</span><span class="n">y</span><span class="p">/</span><span class="n">N</span><span class="p">)</span> <span class="n">y</span>
 <span class="n">Done</span><span class="p">.</span> <span class="n">Your</span> <span class="n">new</span> <span class="n">project</span> <span class="n">is</span> <span class="n">available</span> <span class="n">at</span> <span class="p">/</span><span class="n">Users</span><span class="p">/</span><span class="n">xxxxx</span><span class="p">/</span><span class="n">Sites</span><span class="p">/</span><span class="n">morita-toyscreation</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><strong>ブランチ作成</strong></p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">git</span> <span class="n">init</span> 
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">git</span> <span class="n">init</span> 
 <span class="p">$</span> <span class="n">git</span> <span class="n">checkout</span> <span class="n">-b</span> <span class="n">pelican</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><strong>記事の作成</strong></p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">vi</span> <span class="n">content</span><span class="p">/</span><span class="n">keyboard-review</span><span class="p">.</span><span class="n">md</span>
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">vi</span> <span class="n">content</span><span class="p">/</span><span class="n">keyboard-review</span><span class="p">.</span><span class="nb">md</span>
 
 <span class="n">Title</span><span class="err">:</span><span class="n">My</span> <span class="n">First</span> <span class="n">Review</span>
 <span class="n">Date</span><span class="err">:</span> <span class="n">2018</span><span class="p">-</span><span class="n">03</span><span class="p">-</span><span class="n">06</span> <span class="n">09</span><span class="err">:</span><span class="n">00</span>
 <span class="n">Category</span><span class="err">:</span> <span class="n">Review</span>
 
 <span class="n">Following</span> <span class="n">is</span> <span class="n">a</span> <span class="n">review</span> <span class="n">of</span> <span class="n">my</span> <span class="n">favorite</span> <span class="n">mechanical</span> <span class="n">keyboard</span><span class="p">.</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><strong>ローカル確認</strong></p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">make</span> <span class="n">devserver</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">make</span> <span class="n">devserver</span>
+</code></pre></div>
 
 <p>ブラウザで確認できます。<br>
 http://localhost:8000/</p>
 <p>開発サーバー停止</p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">make</span> <span class="n">stopserver</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">make</span> <span class="n">stopserver</span>
+</code></pre></div>
 
 <p><strong>MarkdownをHTMLに変換</strong></p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">pelican</span> <span class="n">content</span> <span class="n">-o</span> <span class="n">output</span> <span class="n">-s</span> <span class="n">pelicanconf</span><span class="p">.</span><span class="n">py</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">pelican</span> <span class="n">content</span> <span class="n">-o</span> <span class="n">output</span> <span class="n">-s</span> <span class="n">pelicanconf</span><span class="p">.</span><span class="n">py</span>
+</code></pre></div>
 
 <p><strong>pelicanブランチをPush</strong></p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">git</span> <span class="n">add</span> <span class="p">.</span>
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">git</span> <span class="n">add</span> <span class="p">.</span>
 <span class="p">$</span> <span class="n">git</span> <span class="n">commit</span> <span class="n">-m</span> <span class="s2">&quot;first web site.&quot;</span>
 <span class="p">$</span> <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">pelican</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><strong>Github Pages用デプロイ</strong></p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">ghp-import</span> <span class="n">output</span> <span class="n">-b</span> <span class="n">master</span> <span class="n">-m</span> <span class="s2">&quot;Published.&quot;</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">ghp-import</span> <span class="n">output</span> <span class="n">-b</span> <span class="n">master</span> <span class="n">-m</span> <span class="s2">&quot;Published.&quot;</span>
+</code></pre></div>
 
 <p><strong>masterブランチをPush</strong></p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
 <span class="p">$</span> <span class="n">git</span> <span class="n">add</span> <span class="p">.</span>
 <span class="p">$</span> <span class="n">git</span> <span class="n">commit</span> <span class="n">-m</span> <span class="s2">&quot;Published.&quot;</span>
 <span class="p">$</span> <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><strong>ブログ作成完了</strong><br>
 ブラウザでサイトを確認（少し待つ場合があるみたいです。）<br>
@@ -232,16 +252,16 @@ https://morita-toyscreation.github.io/
   </div>
   <div class="tag-cloud">
     <p>
-      <a href="./tag/toizukurieishiyon.html">トイズクリエイション</a>
-      <a href="./tag/toyscreation.html">ToysCreation</a>
-      <a href="./tag/python.html">Python</a>
-      <a href="./tag/pelican.html">Pelican</a>
-      <a href="./tag/github.html">GitHub</a>
+      <a href="https://morita-toyscreation.github.io/tag/toizukurieishiyon.html">トイズクリエイション</a>
+      <a href="https://morita-toyscreation.github.io/tag/toyscreation.html">ToysCreation</a>
+      <a href="https://morita-toyscreation.github.io/tag/python.html">Python</a>
+      <a href="https://morita-toyscreation.github.io/tag/pelican.html">Pelican</a>
+      <a href="https://morita-toyscreation.github.io/tag/github.html">GitHub</a>
     </p>
   </div>
 
   <div class="center social-share">
-    <p>この記事を友達にシェア！</p>
+    <p>Like this article? Share it with your friends!</p>
     <div class="addthis_native_toolbox"></div>
     <div class="addthis_sharing_toolbox"></div>
     <div class="addthis_inline_share_toolbox"></div>
@@ -254,8 +274,10 @@ https://morita-toyscreation.github.io/
 </article>
 
     <footer>
-<p>&copy;  2014-2019</p>
-<p>Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+<p>&copy; 2014-2021 </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
   </main>
 
 
@@ -266,12 +288,13 @@ https://morita-toyscreation.github.io/
 {
   "@context" : "http://schema.org",
   "@type" : "Blog",
-  "name": " ToysCreation.Inc ",
-  "url" : ".",
+  "name": " ToysCreation ",
+  "url" : "https://morita-toyscreation.github.io",
   "image": "/images/toyscreation.png",
-  "description": "ToysCreation.Inc's 株式会社トイズクリエイションはWEBサイト、スマートフォン、ソーシャルゲームの受託開発・自社製品開発を行う会社です。"
+  "description": "ToysCreation.Inc's トイズクリエイションはWEBサイト、スマートフォン、ソーシャルゲームの受託開発・自社製品開発を行うクリエイティブ・プロダクションです。"
 }
 </script>
+
 
 </body>
 </html>

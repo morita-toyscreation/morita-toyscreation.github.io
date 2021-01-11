@@ -8,15 +8,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
 
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
-
-  <link rel="stylesheet" type="text/css" href="./theme/pygments/monokai.min.css">
-  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://morita-toyscreation.github.io/theme/stylesheet/style.min.css">
 
 
-    <link href="https://www.toyscreation.jp/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="ToysCreation.Inc Atom">
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://morita-toyscreation.github.io/theme/pygments/monokai.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://morita-toyscreation.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://morita-toyscreation.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://morita-toyscreation.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://morita-toyscreation.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://morita-toyscreation.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="ToysCreation Atom">
 
 
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
@@ -47,40 +54,67 @@
 <meta name="description" content="[Python] MacにPythonのローカル開発環境を構築" />
 <meta name="keywords" content="トイズクリエイション, ToysCreation, Python, ローカル開発環境">
 
-<meta property="og:site_name" content="ToysCreation.Inc"/>
+
+<meta property="og:site_name" content="ToysCreation"/>
 <meta property="og:title" content="[Python] MacにPythonのローカル開発環境を構築"/>
 <meta property="og:description" content="[Python] MacにPythonのローカル開発環境を構築"/>
 <meta property="og:locale" content="ja_JP"/>
-<meta property="og:url" content="./python_in_local_install.html"/>
+<meta property="og:url" content="https://morita-toyscreation.github.io/python_in_local_install.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2019-01-01 00:00:00+09:00"/>
 <meta property="article:modified_time" content="2019-01-01 00:00:00+09:00"/>
-<meta property="article:author" content="./author/toyscreationinc-morita.html">
+<meta property="article:author" content="https://morita-toyscreation.github.io/author/toyscreationinc-morita.html">
 <meta property="article:section" content="Tech"/>
 <meta property="article:tag" content="トイズクリエイション"/>
 <meta property="article:tag" content="ToysCreation"/>
 <meta property="article:tag" content="Python"/>
 <meta property="article:tag" content="ローカル開発環境"/>
-<meta property="og:image" content="./">
+<meta property="og:image" content="https://morita-toyscreation.github.io/">
 
-  <title>ToysCreation.Inc &ndash; [Python] MacにPythonのローカル開発環境を構築</title>
+  <title>ToysCreation &ndash; [Python] MacにPythonのローカル開発環境を構築</title>
 
 </head>
-<body>
+<body class="light-theme">
   <aside>
     <div>
-      <a href=".">
-        <img src="/images/toyscreation.png" alt="ToysCreation.Inc" title="ToysCreation.Inc">
+      <a href="https://morita-toyscreation.github.io">
+        <img src="/images/toyscreation.png" alt="ToysCreation" title="ToysCreation">
       </a>
-      <h1><a href=".">ToysCreation.Inc</a></h1>
 
-<p>株式会社トイズクリエイション</p>
+      <h1>
+        <a href="https://morita-toyscreation.github.io">ToysCreation</a>
+      </h1>
+
+<p>トイズクリエイション</p>
+
       <nav>
         <ul class="list">
-          <li><a href="./pages/about.html#about">会社概要</a></li>
-          <li><a href="./pages/service.html#service">サービス</a></li>
-          <li><a href="./pages/portfolio.html#portfolio">開発実績</a></li>
-          <li><a href="./pages/contact.html#contact">お問い合わせ</a></li>
+
+
+              <li>
+                <a target="_self"
+                   href="https://morita-toyscreation.github.io/pages/about.html#about">
+                  プロフィール
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://morita-toyscreation.github.io/pages/contact.html#contact">
+                  お問い合わせ
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://morita-toyscreation.github.io/pages/portfolio.html#portfolio">
+                  開発実績
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://morita-toyscreation.github.io/pages/service.html#service">
+                  サービス
+                </a>
+              </li>
 
         </ul>
       </nav>
@@ -89,18 +123,17 @@
       </ul>
     </div>
 
-
   </aside>
   <main>
 
     <nav>
-      <a href=".">Home</a>
+      <a href="https://morita-toyscreation.github.io">Home</a>
 
       <a href="/archives.html">Archives</a>
       <a href="/categories.html">Categories</a>
       <a href="/tags.html">Tags</a>
 
-      <a href="https://www.toyscreation.jp/feeds/all.atom.xml">Atom</a>
+      <a href="https://morita-toyscreation.github.io/feeds/all.atom.xml">Atom</a>
 
     </nav>
 
@@ -109,7 +142,7 @@
       
     <h1 id="python_in_local_install">[Python] MacにPythonのローカル開発環境を構築</h1>
     <p>
-      Posted on 2019年1月1日 in <a href="./category/tech.html">Tech</a>
+      Posted on 2019年1月1日 in <a href="https://morita-toyscreation.github.io/category/tech.html">Tech</a>
 
     </p>
   </header>
@@ -117,34 +150,29 @@
 
   <div>
     <p><strong>Xcodeインストール</strong></p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">sudo</span> <span class="n">xcode-select</span> <span class="p">-</span><span class="n">-install</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">sudo</span> <span class="n">xcode-select</span> <span class="p">-</span><span class="n">-install</span>
+</code></pre></div>
 
 <p><strong>Homebrewインストール</strong></p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">ruby</span> <span class="n">-e</span> <span class="s2">&quot;</span><span class="p">$(</span><span class="n">curl</span> <span class="n">-fsSL</span> <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">raw</span><span class="p">.</span><span class="n">githubusercontent</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">Homebrew</span><span class="p">/</span><span class="n">install</span><span class="p">/</span><span class="n">master</span><span class="p">/</span><span class="n">install</span><span class="p">)</span><span class="s2">&quot;</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">ruby</span> <span class="n">-e</span> <span class="s2">&quot;</span><span class="p">$(</span><span class="nb">curl </span><span class="n">-fsSL</span> <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">raw</span><span class="p">.</span><span class="n">githubusercontent</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">Homebrew</span><span class="p">/</span><span class="n">install</span><span class="p">/</span><span class="n">master</span><span class="p">/</span><span class="n">install</span><span class="p">)</span><span class="s2">&quot;</span>
+</code></pre></div>
 
 <p><strong>Pythonインストール</strong><br>
 ※ pipなどのツール群も一緒にインストールしてくれるのでインストール</p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">python</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">python</span>
+</code></pre></div>
 
 <p>その他必要そうなソフトウェア</p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">libevent</span>
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">libevent</span>
 <span class="p">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">xz</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><strong>pyenvインストール</strong></p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">pyenv-virtualenv</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">pyenv-virtualenv</span>
+</code></pre></div>
 
 <p>pyenvにパスを通す</p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">vi</span> <span class="p">~/.</span><span class="n">bash_profile</span>
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">vi</span> <span class="p">~/.</span><span class="n">bash_profile</span>
 
 <span class="n">export</span> <span class="n">PYENV_ROOT</span><span class="p">=${</span><span class="n">HOME</span><span class="p">}/.</span><span class="n">pyenv</span>
 <span class="k">if</span> <span class="p">[</span> <span class="n">-d</span> <span class="s2">&quot;${PYENV_ROOT}&quot;</span> <span class="p">];</span> <span class="n">then</span>
@@ -152,59 +180,53 @@
 <span class="n">eval</span> <span class="s2">&quot;</span><span class="p">$(</span><span class="n">pyenv</span> <span class="n">init</span> <span class="p">-)</span><span class="s2">&quot;</span>
 <span class="n">eval</span> <span class="s2">&quot;</span><span class="p">$(</span><span class="n">pyenv</span> <span class="n">virtualenv-init</span> <span class="p">-)</span><span class="s2">&quot;</span>
 <span class="n">fi</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>pyenvインストールリスト取得</p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">pyenv</span> <span class="n">install</span> <span class="n">-l</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">pyenv</span> <span class="n">install</span> <span class="n">-l</span>
+</code></pre></div>
 
 <p>pyenvバージョンインストール<br>
 ※ 一旦2系、3系の最新をインストール</p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">pyenv</span> <span class="n">install</span> <span class="n">2</span><span class="p">.</span><span class="n">7</span><span class="p">.</span><span class="n">14</span>
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">pyenv</span> <span class="n">install</span> <span class="n">2</span><span class="p">.</span><span class="n">7</span><span class="p">.</span><span class="n">14</span>
 <span class="p">$</span> <span class="n">pyenv</span> <span class="n">install</span> <span class="n">3</span><span class="p">.</span><span class="n">63</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><strong>バージョン対応</strong></p>
 <p>全体</p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">pyenv</span> <span class="n">global</span> <span class="p">[</span><span class="n">バージョン</span><span class="p">]</span>
-</pre></div>
-
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">pyenv</span> <span class="n">global</span> <span class="p">[</span><span class="n">バージョン</span><span class="p">]</span>
+</code></pre></div>
 
 <p>対象ディレクトリ以下</p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">eval</span> <span class="s2">&quot;</span><span class="p">$(</span><span class="n">pyenv</span> <span class="n">init</span> <span class="p">-)</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">eval</span> <span class="s2">&quot;</span><span class="p">$(</span><span class="n">pyenv</span> <span class="n">init</span> <span class="p">-)</span><span class="s2">&quot;</span>
 <span class="p">$</span> <span class="n">pyenv</span> <span class="n">local</span> <span class="p">[</span><span class="n">バージョン</span><span class="p">]</span>
 <span class="p">$</span> <span class="n">pyenv</span> <span class="n">shelll</span> <span class="p">[</span><span class="n">バージョン</span><span class="p">]</span>
-</pre></div>
-
+</code></pre></div>
 
 <p><strong>Virtualenvインストール</strong><br>
 入れ方と使い方を確認、環境を汚さないために推奨</p>
 <p>仮想環境作成</p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">pyenv</span> <span class="n">virtualenv</span> <span class="p">[</span><span class="n">バージョン</span><span class="p">]</span> <span class="p">[</span><span class="n">仮想環境名</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">pyenv</span> <span class="n">virtualenv</span> <span class="p">[</span><span class="n">バージョン</span><span class="p">]</span> <span class="p">[</span><span class="n">仮想環境名</span><span class="p">]</span>
 <span class="p">$</span> <span class="n">pyenv</span> <span class="n">virtualenv</span> <span class="n">3</span><span class="p">.</span><span class="n">6</span><span class="p">.</span><span class="n">3</span> <span class="n">virtualenvTest</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>仮想環境と開発ディレクトリ紐付け</p>
-<div class="highlight"><pre><span></span><span class="p">$</span> <span class="n">mkdir</span> <span class="n">virtualenvTest</span>
-<span class="p">$</span> <span class="n">cd</span> <span class="n">virtualenvTest</span>
+<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">mkdir</span> <span class="n">virtualenvTest</span>
+<span class="p">$</span> <span class="nb">cd </span><span class="n">virtualenvTest</span>
 <span class="p">$</span> <span class="n">pyenv</span> <span class="n">local</span> <span class="n">virtualenvTest</span>
-</pre></div>
+</code></pre></div>
   </div>
   <div class="tag-cloud">
     <p>
-      <a href="./tag/toizukurieishiyon.html">トイズクリエイション</a>
-      <a href="./tag/toyscreation.html">ToysCreation</a>
-      <a href="./tag/python.html">Python</a>
-      <a href="./tag/rokarukai-fa-huan-jing.html">ローカル開発環境</a>
+      <a href="https://morita-toyscreation.github.io/tag/toizukurieishiyon.html">トイズクリエイション</a>
+      <a href="https://morita-toyscreation.github.io/tag/toyscreation.html">ToysCreation</a>
+      <a href="https://morita-toyscreation.github.io/tag/python.html">Python</a>
+      <a href="https://morita-toyscreation.github.io/tag/rokarukai-fa-huan-jing.html">ローカル開発環境</a>
     </p>
   </div>
 
   <div class="center social-share">
-    <p>この記事を友達にシェア！</p>
+    <p>Like this article? Share it with your friends!</p>
     <div class="addthis_native_toolbox"></div>
     <div class="addthis_sharing_toolbox"></div>
     <div class="addthis_inline_share_toolbox"></div>
@@ -217,8 +239,10 @@
 </article>
 
     <footer>
-<p>&copy;  2014-2019</p>
-<p>Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a></p>    </footer>
+<p>&copy; 2014-2021 </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
   </main>
 
 
@@ -229,12 +253,13 @@
 {
   "@context" : "http://schema.org",
   "@type" : "Blog",
-  "name": " ToysCreation.Inc ",
-  "url" : ".",
+  "name": " ToysCreation ",
+  "url" : "https://morita-toyscreation.github.io",
   "image": "/images/toyscreation.png",
-  "description": "ToysCreation.Inc's 株式会社トイズクリエイションはWEBサイト、スマートフォン、ソーシャルゲームの受託開発・自社製品開発を行う会社です。"
+  "description": "ToysCreation.Inc's トイズクリエイションはWEBサイト、スマートフォン、ソーシャルゲームの受託開発・自社製品開発を行うクリエイティブ・プロダクションです。"
 }
 </script>
+
 
 </body>
 </html>
