@@ -1,0 +1,50 @@
+aside {
+    background-color: #eee;
+    text-align: center;
+}
+
+aside div img {
+    border-radius: 0;
+    max-width: 140px;
+}
+
+aside, aside a {
+    color: #333;
+}
+
+aside a:hover{
+    color:#242121;
+}
+
+a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+a:hover{
+    color:#7b7b7b;
+}
+
+a.btn {
+    background-color: #1abc9c;
+    padding: .6em;
+    font-size: .8em;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+.tag-cloud a {
+    background-color: #1abc9c;
+    padding: .2em .6em;
+    font-size: .74em;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}

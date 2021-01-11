@@ -30,6 +30,39 @@ Order: 3
 
 <div class="works">
 
+<h3>ラブライブ！スクールアイドルフェスティバルALL STARS</h3>
+
+<p>
+バックエンド・クライアントプログラミング（サーバー連携）を担当しました。
+共通UI、共通機能、ホーム、ログインボーナス、アイドル一覧・詳細、ガチャ、アクセサリー機能を主に担当しました。
+</p>
+
+<table>
+    <tr>
+        <th style="width: 20%;">企業名</th>
+        <td style="width: 80%;">Klab株式会社 </td>
+    </tr>
+    <tr>
+        <th style="width: 20%;">参考サイト</th>
+        <td style="width: 80%;"><a href='https://lovelive-as.bushimo.jp/' target='_blank'>公式サイト</a></td>
+    </tr>
+    <tr>
+        <th style="width: 20%;">作業期間</th>
+        <td style="width: 80%;">10ヶ月</td>
+    </tr>
+    <tr>
+        <th style="width: 20%;">仕様技術</th>
+        <td style="width: 80%;">
+プログラム言語：Python/C# フレームワーク：Flask/Unity3D  <br />
+DB：MySQL/Redis インフラ：AWS ツール：Git/GitHub
+        </td>
+    </tr>
+</table>
+
+</div>
+
+<div class="works">
+
 <h3>翻訳支援ツール</h3> 
     
 <p>

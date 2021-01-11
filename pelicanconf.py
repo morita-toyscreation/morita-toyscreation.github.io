@@ -5,10 +5,10 @@ from __future__ import unicode_literals
 AUTHOR = 'ToysCreation.Inc'
 SITEURL = 'https://www.toyscreation.jp'
 RELATIVE_URLS = True
-SITENAME = 'ToysCreation.Inc'
+SITENAME = 'ToysCreation'
 SITETITLE = SITENAME
-SITESUBTITLE = '株式会社トイズクリエイション'
-SITEDESCRIPTION = '%s\'s 株式会社トイズクリエイションはWEBサイト、スマートフォン、ソーシャルゲームの受託開発・自社製品開発を行う会社です。' % AUTHOR
+SITESUBTITLE = 'トイズクリエイション'
+SITEDESCRIPTION = '%s\'s トイズクリエイションはWEBサイト、スマートフォン、ソーシャルゲームの受託開発・自社製品開発を行うクリエイティブ・プロダクションです。' % AUTHOR
 SITELOGO = '/images/toyscreation.png'
 FAVICON = '/images/favicon.ico'
 BROWSER_COLOR = '#333'
@@ -16,7 +16,8 @@ PYGMENTS_STYLE = 'monokai'
 
 ROBOTS = 'index, follow'
 
-THEME = "./themes/flex"
+THEME = "../pelican-themes/Flex"
+STATIC_PATHS = ['static']
 PATH = 'content'
 TIMEZONE = 'Asia/Tokyo'
 
@@ -38,14 +39,14 @@ I18N_TEMPLATES_LANG = 'ja'
 #     'slug': 'by-sa'
 # }
 
-COPYRIGHT_YEAR = "2014-2019"
+COPYRIGHT_YEAR = "2014-2021"
 
 DEFAULT_PAGINATION = 10
 
-# EXTRA_PATH_METADATA = {
-#     'extra/custom.css': {'path': 'static/custom.css'},
-# }
-# CUSTOM_CSS = 'static/custom.css'
+EXTRA_PATH_METADATA = {
+    'extra/custom.css': {'path': 'static/custom.css'},
+}
+CUSTOM_CSS = 'static/custom.css'
 
 USE_FOLDER_AS_CATEGORY = True
 MAIN_MENU = True
@@ -70,7 +71,7 @@ GOOGLE_ANALYTICS = 'UA-55971269-1'
 # STATUSCAKE = { 'trackid': 'your-id', 'days': 7, 'design': 6, 'rumid': 1234 }
 
 # Enable i18n plugin.
-PLUGIN_PATHS = ['./pelican-plugins']
+PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = ['sitemap', 'i18n_subsites']
 
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
