@@ -17,7 +17,7 @@ PYGMENTS_STYLE = 'monokai'
 ROBOTS = 'index, follow'
 
 THEME = "../pelican-themes/Flex"
-STATIC_PATHS = ['static']
+STATIC_PATHS = ['images', 'static']
 PATH = 'content'
 TIMEZONE = 'Asia/Tokyo'
 
