@@ -1,5 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>ToysCreation - Tech</title><link href="https://www.toyscreation.jp/" rel="alternate"></link><link href="https://www.toyscreation.jp/feeds/tech.atom.xml" rel="self"></link><id>https://www.toyscreation.jp/</id><updated>2020-01-11T00:00:00+09:00</updated><subtitle>トイズクリエイション</subtitle><entry><title>[Python] Pelicanのテーマ、プラグイン導入</title><link href="https://www.toyscreation.jp/pelican_in_v20210111.html" rel="alternate"></link><published>2020-01-11T00:00:00+09:00</published><updated>2020-01-11T00:00:00+09:00</updated><author><name>ToysCreation.Inc morita</name></author><id>tag:www.toyscreation.jp,2020-01-11:/pelican_in_v20210111.html</id><summary type="html">&lt;p&gt;[Python] Pelicanのテーマ、プラグイン導入&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;1. Pelican テーマ追加&lt;/strong&gt;  &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>ToysCreation - Tech</title><link href="https://www.toyscreation.jp/" rel="alternate"></link><link href="https://www.toyscreation.jp/feeds/tech.atom.xml" rel="self"></link><id>https://www.toyscreation.jp/</id><updated>2021-01-12T00:00:00+09:00</updated><subtitle>トイズクリエイション</subtitle><entry><title>[MySQL] MySQLDBチューニング : INDEX編</title><link href="https://www.toyscreation.jp/mysql_performance_index.html" rel="alternate"></link><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><author><name>ToysCreation.Inc morita</name></author><id>tag:www.toyscreation.jp,2021-01-12:/mysql_performance_index.html</id><summary type="html">&lt;p&gt;[MySQL] MySQLDBチューニング : INDEX編&lt;/p&gt;</summary><content type="html">&lt;h2&gt;概要&lt;/h2&gt;
+&lt;p&gt;MySQLWorkbenchのPerformance Reports機能を用いてDB INDEXの調査と確認、設定を行うマニュアルです。&lt;/p&gt;
+&lt;h3&gt;前提条件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MySQLDB限定である(mariaDBは未検証)&lt;/li&gt;
+&lt;li&gt;MySQLWorkbenchがインストールされていること&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;環境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;mysqld: Ver 5.6.23 for Linux on x86_64 (MySQL Community Server (GPL))&lt;/li&gt;
+&lt;li&gt;MySQLworkbench : v6.2.4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;参照資料&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;PerformanceReportsについての資料&lt;/li&gt;
+&lt;li&gt;http://www.slideshare.net/yoyamasaki/20131110-tuning-onmysql56&lt;/li&gt;
+&lt;li&gt;DBチューニング入門(INDEX関連)&lt;/li&gt;
+&lt;li&gt;http://sssslide.com/www.slideshare.net/infinite_loop/mysql-indexexplain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;事前準備&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MySQLの設定変更&lt;/li&gt;
+&lt;li&gt;MySQLWorkbenchのPerformanceReportsを有効化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;1.MySQLの準備&lt;/h3&gt;
+&lt;h4&gt;1.DB設定の変更&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;APIが発行するSQLをログから確認のするためMySQLの設定を記述する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ vim /etc/my.cnf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;設定内容は以下の通りになります。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[mysqld]&lt;/span&gt;
+&lt;span class="c1"&gt;# debug&lt;/span&gt;
+&lt;span class="na"&gt;slow_query_log&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;1 #スロークエリログ出力有効化&lt;/span&gt;
+&lt;span class="na"&gt;slow_query_log_file&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;/var/log/mysqld-slow.log #スロークエリログファイル名&lt;/span&gt;
+&lt;span class="na"&gt;long_query_time&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;2 #スロークエリとして認識させる時間[秒]&lt;/span&gt;
+&lt;span class="na"&gt;general_log&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;1&lt;/span&gt;
+&lt;span class="na"&gt;general_log_file&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;/var/log/mysqld-query.log&lt;/span&gt;
+&lt;span class="na"&gt;log-queries-not-using-indexes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;2.MySQLWorkBenchの準備&lt;/h3&gt;
+&lt;h4&gt;1. PerformanceReportsをインストール&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;MySQLWorkBenchを起動してPerformanceReportsを有効にする。
+(※有効にするとPerformancereportsが利用するDB "sys"が作成される)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;メニュー "Management" をクリック&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;項目 "Performance schema Setup" をクリック。
+  機能を利用するための有効化(インストールっぽい)するボタンがあるので、すべて有効になるようにクリック。&lt;/li&gt;
+&lt;li&gt;画面中央のバー "Performance schema"のバーが"Server default"に変更する。
+  (詳細は下記の画像参照) 
+&lt;img alt="WB_001" src="../images/mysql_performance_index/WB_001.jpg"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;APIが発行するSQL Query調査, EXLPAIN確認, DBschema変更&lt;/h3&gt;
+&lt;p&gt;調査を始める前の注意点として、事前にPerformanceReportsのLogをクリアしておく必要がある。&lt;br&gt;
+クリア方法については '99.PerformanceReports(Log)のリセット' を参照して下さい。&lt;/p&gt;
+&lt;h4&gt;1. INDEXが最適化されていないQueryの調査&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;調査対象のAPIを実行する。(Queryを発行する)&lt;/li&gt;
+&lt;li&gt;MySQLWorkbenchより　メニュー "Management" -&amp;gt; "PerformanceReposts" を開く&lt;/li&gt;
+&lt;li&gt;項目 "High Cost SQL statements" -&amp;gt; "Full Scan Tables"の項目を開く&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;"Full Scan Tables"ではQuery単位でINDEXが最適化されていないことが確認できる。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="WB_002" src="../images/mysql_performance_index/WB_002.jpg"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;INDEXが利用されていないテーブル単位で確認する場合は以下の通り&lt;/li&gt;
+&lt;li&gt;MySQLWorkbenchより　メニュー "Management" -&amp;gt; "PerformanceReposts" を開く&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;項目 "Database schema statements" -&amp;gt; "Tables With Full Scan Tables"の項目を開く&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;カラムの"Object"が特定のQueryによってINDEXが利用されていないテーブルとなる。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(詳細画面)
+&lt;img alt="WB_003" src="../images/mysql_performance_index/WB_003.jpg"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;この項目で表示されているインデックスは利用されていないインデックスキーとなります。  表示の詳細は以下の通りです。&lt;/li&gt;
+&lt;li&gt;Schema : データベース&lt;/li&gt;
+&lt;li&gt;Object : テーブル&lt;/li&gt;
+&lt;li&gt;Index : INDEXキー&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;2. EXPLAIN確認&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;ログより実際に発行されているQueryを確認する。ログは以下の通りです。&lt;/li&gt;
+&lt;li&gt;/var/log/mysqld-query.log&lt;/li&gt;
+&lt;li&gt;Queryの中で発行されているSQL文をコピーしてMySQLWorkbench上に書きEXPALINを実行する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(詳細画面)
+&lt;img alt="WB_004" src="../images/mysql_performance_index/WB_004.jpg"&gt;&lt;/p&gt;
+&lt;h4&gt;3. DBschema変更(INDEX設定)&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;変更したいテーブルにカーソルを合わせて、スパナマークのボタンをクリック。(設定画面を開く)&lt;/li&gt;
+&lt;li&gt;画面下部にある"Indexes"タブをクリックして、INDEX設定画面よりINDEXを設定する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(詳細画面)
+&lt;img alt="WB_005" src="../images/mysql_performance_index/WB_005.jpg"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;設定が完了したらもう一度EXPLAINよりQueryを確認して想定通りに動作しているか確認する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;4.不要のINDEX調査&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;実際にINDEXが設定されているが利用されていない場合の調査方法は以下の通りになります。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;事前にPerformanceReportsのLogをクリアしておく必要がある。&lt;br&gt;
+  クリア方法については '99.PerformanceReports(Log)のリセット' を参照して下さい。  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;全APIを実行する。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;MySQLWorkbenchより　メニュー "Management" -&amp;gt; "PerformanceReposts" を開く&lt;/li&gt;
+&lt;li&gt;項目 "Database schema statements" -&amp;gt; "Unset Indexes"の項目を開く&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(詳細画面)
+&lt;img alt="WB_006" src="../images/mysql_performance_index/WB_006.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;99.PerformanceReports(Log)のリセット&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;メニュー "Management" をクリック&lt;/li&gt;
+&lt;li&gt;項目 "Performance schema Setup" をクリック。&lt;/li&gt;
+&lt;li&gt;"Clear Event Tables"をクリックしてクリアする。  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(詳細画面)
+&lt;img alt="WB_007" src="../images/mysql_performance_index/WB_007.jpg"&gt;&lt;/p&gt;</content><category term="Tech"></category><category term="トイズクリエイション"></category><category term="ToysCreation"></category><category term="MySQL"></category><category term="MySQLWorkbench"></category></entry><entry><title>[Python] Pelicanのテーマ、プラグイン導入</title><link href="https://www.toyscreation.jp/pelican_in_v20210111.html" rel="alternate"></link><published>2021-01-11T00:00:00+09:00</published><updated>2021-01-11T00:00:00+09:00</updated><author><name>ToysCreation.Inc morita</name></author><id>tag:www.toyscreation.jp,2021-01-11:/pelican_in_v20210111.html</id><summary type="html">&lt;p&gt;[Python] Pelicanのテーマ、プラグイン導入&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;1. Pelican テーマ追加&lt;/strong&gt;  &lt;/p&gt;
 &lt;p&gt;Pelican は様々なテーマが提供されている。&lt;br&gt;
 Pelican テーマ一覧をclone&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-recursive&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="p"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;getpelican&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pelican-themes&lt;/span&gt; &lt;span class="p"&gt;../&lt;/span&gt;&lt;span class="n"&gt;pelican-themes&lt;/span&gt;
