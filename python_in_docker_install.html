@@ -51,13 +51,13 @@
     <meta name="msapplication-TileColor" content="#333">
 
 <meta name="author" content="ToysCreation.Inc morita" />
-<meta name="description" content="[Docker] MacにDockerをインストール" />
-<meta name="keywords" content="トイズクリエイション, ToysCreation, Docker, Python">
+<meta name="description" content="[Python] DockerにPython + Flask環境を構築" />
+<meta name="keywords" content="トイズクリエイション, ToysCreation, Docker, Python, Flask">
 
 
 <meta property="og:site_name" content="ToysCreation"/>
-<meta property="og:title" content="[Python] DockerにPython環境を構築"/>
-<meta property="og:description" content="[Docker] MacにDockerをインストール"/>
+<meta property="og:title" content="[Python] DockerにPython + Flask環境を構築"/>
+<meta property="og:description" content="[Python] DockerにPython + Flask環境を構築"/>
 <meta property="og:locale" content="ja_JP"/>
 <meta property="og:url" content="https://www.toyscreation.jp/python_in_docker_install.html"/>
 <meta property="og:type" content="article"/>
@@ -69,9 +69,10 @@
 <meta property="article:tag" content="ToysCreation"/>
 <meta property="article:tag" content="Docker"/>
 <meta property="article:tag" content="Python"/>
+<meta property="article:tag" content="Flask"/>
 <meta property="og:image" content="https://www.toyscreation.jp/">
 
-  <title>ToysCreation &ndash; [Python] DockerにPython環境を構築</title>
+  <title>ToysCreation &ndash; [Python] DockerにPython + Flask環境を構築</title>
 
 </head>
 <body class="light-theme">
@@ -140,7 +141,7 @@
 <article class="single">
   <header>
       
-    <h1 id="python_in_docker_install">[Python] DockerにPython環境を構築</h1>
+    <h1 id="python_in_docker_install">[Python] DockerにPython + Flask環境を構築</h1>
     <p>
       Posted on 2021年1月15日 in <a href="https://www.toyscreation.jp/category/tech.html">Tech</a>
 
@@ -149,7 +150,9 @@
 
 
   <div>
-    <p><strong>ダウンロード・インストール</strong>  </p>
+    <p><a href="https://twitter.com/hashtag/%E9%80%B1%E6%9C%AB%E3%83%8F%E3%83%83%E3%82%AB%E3%82%BD%E3%83%B3">週末ハッカソン</a> で
+WEBサイトを作ろうと思いDockerにPython + Flask環境を構築した</p>
+<p><strong>ダウンロード・インストール</strong>  </p>
 <p>Get Docker for Macからダウンロード<br>
 <a href="">https://docs.docker.com/docker-for-mac/install/</a></p>
 <p>ダウンロードしたDocker.dmgを展開してインストール完了  </p>
@@ -178,7 +181,7 @@ NEXT STEP を押していき動作確認  </p>
 
 <p>サンプル用アプリ<br>
 コードの中身が知りたい方は<a href="https://flask.palletsprojects.com/en/1.1.x/">Document</a>を参照してください。  </p>
-<div class="highlight"><pre><span></span><code>sample/  
+<div class="highlight"><pre><span></span><code>weekend-hackathon/  
 |-- app  
 |   |-- views  
 |   |    `-- sample.py  
@@ -188,11 +191,11 @@ NEXT STEP を押していき動作確認  </p>
 `-- requirements.txt  
 </code></pre></div>
 
-<p><em>sample/requirements.txt</em>  </p>
+<p><em>weekend-hackathon/requirements.txt</em>  </p>
 <div class="highlight"><pre><span></span><code>Flask==1.1.2
 </code></pre></div>
 
-<p><em>sample/app/views/sample.py</em>  </p>
+<p><em>weekend-hackathon/app/views/sample.py</em>  </p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Blueprint</span>
 
 <span class="n">sample</span> <span class="o">=</span> <span class="n">Blueprint</span><span class="p">(</span><span class="s2">&quot;sample&quot;</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">)</span>
@@ -204,7 +207,7 @@ NEXT STEP を押していき動作確認  </p>
     <span class="k">return</span> <span class="s2">&quot;sample.index&quot;</span>
 </code></pre></div>
 
-<p><em>sample/app/<strong>init</strong>.py</em>  </p>
+<p><em>weekend-hackathon/app/__init__.py</em>  </p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
 <span class="kn">from</span> <span class="nn">app.views.sample</span> <span class="kn">import</span> <span class="n">sample</span>
 
@@ -219,7 +222,7 @@ NEXT STEP を押していき動作確認  </p>
     <span class="n">app</span><span class="o">.</span><span class="n">register_blueprint</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span>
 </code></pre></div>
 
-<p><em>sample/app.py</em>  </p>
+<p><em>weekend-hackathon/app.py</em>  </p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">app</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">get_app</span><span class="p">()</span>
@@ -256,6 +259,7 @@ NEXT STEP を押していき動作確認  </p>
       <a href="https://www.toyscreation.jp/tag/toyscreation.html">ToysCreation</a>
       <a href="https://www.toyscreation.jp/tag/docker.html">Docker</a>
       <a href="https://www.toyscreation.jp/tag/python.html">Python</a>
+      <a href="https://www.toyscreation.jp/tag/flask.html">Flask</a>
     </p>
   </div>
 
