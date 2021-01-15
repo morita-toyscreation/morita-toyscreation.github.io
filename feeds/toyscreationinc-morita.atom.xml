@@ -1,5 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>ToysCreation - ToysCreation.Inc morita</title><link href="https://www.toyscreation.jp/" rel="alternate"></link><link href="https://www.toyscreation.jp/feeds/toyscreationinc-morita.atom.xml" rel="self"></link><id>https://www.toyscreation.jp/</id><updated>2021-01-12T00:00:00+09:00</updated><subtitle>トイズクリエイション</subtitle><entry><title>[MySQL] MySQLDBチューニング : INDEX編</title><link href="https://www.toyscreation.jp/mysql_performance_index.html" rel="alternate"></link><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><author><name>ToysCreation.Inc morita</name></author><id>tag:www.toyscreation.jp,2021-01-12:/mysql_performance_index.html</id><summary type="html">&lt;p&gt;[MySQL] MySQLDBチューニング : INDEX編&lt;/p&gt;</summary><content type="html">&lt;h2&gt;概要&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>ToysCreation - ToysCreation.Inc morita</title><link href="https://www.toyscreation.jp/" rel="alternate"></link><link href="https://www.toyscreation.jp/feeds/toyscreationinc-morita.atom.xml" rel="self"></link><id>https://www.toyscreation.jp/</id><updated>2021-01-15T00:00:00+09:00</updated><subtitle>トイズクリエイション</subtitle><entry><title>[Python] DockerにPython環境を構築</title><link href="https://www.toyscreation.jp/python_in_docker_install.html" rel="alternate"></link><published>2021-01-15T00:00:00+09:00</published><updated>2021-01-15T00:00:00+09:00</updated><author><name>ToysCreation.Inc morita</name></author><id>tag:www.toyscreation.jp,2021-01-15:/python_in_docker_install.html</id><summary type="html">&lt;p&gt;[Docker] MacにDockerをインストール&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;ダウンロード・インストール&lt;/strong&gt;  &lt;/p&gt;
+&lt;p&gt;Get Docker for Macからダウンロード&lt;br&gt;
+&lt;a href=""&gt;https://docs.docker.com/docker-for-mac/install/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ダウンロードしたDocker.dmgを展開してインストール完了  &lt;/p&gt;
+&lt;p&gt;インストール後にチュートリアル開始  &lt;br&gt;
+NEXT STEP を押していき動作確認  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Python + Flask環境&lt;/strong&gt;    &lt;/p&gt;
+&lt;p&gt;Dockerfile  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="s"&gt;python:3.7.4&lt;/span&gt;
+
+&lt;span class="k"&gt;WORKDIR&lt;/span&gt;&lt;span class="s"&gt; /app&lt;/span&gt;
+&lt;span class="k"&gt;ADD&lt;/span&gt; . /app
+
+&lt;span class="k"&gt;RUN&lt;/span&gt; apt-get update &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt-get clean&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="k"&gt;RUN&lt;/span&gt; pip install -r requirements.txt
+
+&lt;span class="k"&gt;ENV&lt;/span&gt; &lt;span class="nv"&gt;TZ&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Asia/Tokyo&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;ENV&lt;/span&gt; FLASK_APP /app/app.py
+&lt;span class="k"&gt;ENV&lt;/span&gt; PYTHONPATH &lt;span class="nv"&gt;$PYTHONPATH&lt;/span&gt;:/app
+
+&lt;span class="k"&gt;ENV&lt;/span&gt; PORT &lt;span class="m"&gt;8080&lt;/span&gt;
+&lt;span class="k"&gt;EXPOSE&lt;/span&gt;&lt;span class="s"&gt; 8080&lt;/span&gt;
+
+&lt;span class="k"&gt;CMD&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;python&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;app.py&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;サンプル用アプリ&lt;br&gt;
+コードの中身が知りたい方は&lt;a href="https://flask.palletsprojects.com/en/1.1.x/"&gt;Document&lt;/a&gt;を参照してください。  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sample/  
+|-- app  
+|   |-- views  
+|   |    `-- sample.py  
+|   `-- __init__.py  
+|-- app.py  
+|-- Dockerfile  
+`-- requirements.txt  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;sample/requirements.txt&lt;/em&gt;  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Flask==1.1.2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;sample/app/views/sample.py&lt;/em&gt;  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;flask&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Blueprint&lt;/span&gt;
+
+&lt;span class="n"&gt;sample&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Blueprint&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;sample&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@sample&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;index&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;sample.index&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;sample.index&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;sample/app/&lt;strong&gt;init&lt;/strong&gt;.py&lt;/em&gt;  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;flask&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Flask&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;app.views.sample&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;sample&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_app&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Flask&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="vm"&gt;__name__&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;_register_blueprint&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;_register_blueprint&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register_blueprint&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;sample/app.py&lt;/em&gt;  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;app&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_app&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;0.0.0.0&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8080&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Docker ビルド&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ docker build -t weekend-hackathon .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Flask起動&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ docker run --name weekend-hackathon -p &lt;span class="m"&gt;8080&lt;/span&gt;:8080 -v ~/Sites/weekend-hackathon/:/app -it --rm weekend-hackathon
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;http://localhost:8080/にアクセス&lt;br&gt;
+&lt;code&gt;sample.index&lt;/code&gt; が表示される。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考コマンド&lt;/strong&gt;  &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;イメージ確認 : &lt;code&gt;docker images&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;コンテナ確認 : &lt;code&gt;docker ps&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;コンテナ確認（停止） : &lt;code&gt;docker ps -a&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;コンテナ起動 : &lt;code&gt;docker start xxxxx&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;コンテナ接続 : &lt;code&gt;docker exec -it xxxxx /bin/bash&lt;/code&gt;    &lt;/li&gt;
+&lt;li&gt;コンテナ停止 : &lt;code&gt;docker stop xxxxx&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;コンテナ削除 : &lt;code&gt;docker rm xxxxx&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;イメージ削除 : &lt;code&gt;docker rmi xxxxx&lt;/code&gt;  &lt;/li&gt;
+&lt;/ol&gt;</content><category term="Tech"></category><category term="トイズクリエイション"></category><category term="ToysCreation"></category><category term="Docker"></category><category term="Python"></category></entry><entry><title>[MySQL] MySQLDBチューニング : INDEX編</title><link href="https://www.toyscreation.jp/mysql_performance_index.html" rel="alternate"></link><published>2021-01-12T00:00:00+09:00</published><updated>2021-01-12T00:00:00+09:00</updated><author><name>ToysCreation.Inc morita</name></author><id>tag:www.toyscreation.jp,2021-01-12:/mysql_performance_index.html</id><summary type="html">&lt;p&gt;[MySQL] MySQLDBチューニング : INDEX編&lt;/p&gt;</summary><content type="html">&lt;h2&gt;概要&lt;/h2&gt;
 &lt;p&gt;MySQLWorkbenchのPerformance Reports機能を用いてDB INDEXの調査と確認、設定を行うマニュアルです。&lt;/p&gt;
 &lt;h3&gt;前提条件&lt;/h3&gt;
 &lt;ul&gt;
