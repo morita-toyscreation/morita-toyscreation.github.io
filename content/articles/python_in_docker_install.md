@@ -1,12 +1,15 @@
-Title: [Python] DockerにPython環境を構築  
+Title: [Python] DockerにPython + Flask環境を構築  
 Date: 2021-01-15 00:00  
 Modified: 2021-01-15 00:00  
 Category: Tech  
-Tags: トイズクリエイション, ToysCreation, Docker, Python   
+Tags: トイズクリエイション, ToysCreation, Docker, Python, Flask
 Slug: python_in_docker_install  
 Authors: ToysCreation.Inc morita  
-Summary: [Docker] MacにDockerをインストール  
+Summary: [Python] DockerにPython + Flask環境を構築  
 Cover:  
+
+[週末ハッカソン](https://twitter.com/hashtag/%E9%80%B1%E6%9C%AB%E3%83%8F%E3%83%83%E3%82%AB%E3%82%BD%E3%83%B3) で
+WEBサイトを作ろうと思いDockerにPython + Flask環境を構築した
 
 **ダウンロード・インストール**  
 
@@ -44,7 +47,7 @@ CMD ["python", "app.py"]
 サンプル用アプリ  
 コードの中身が知りたい方は[Document](https://flask.palletsprojects.com/en/1.1.x/)を参照してください。  
 ```HTML
-sample/  
+weekend-hackathon/  
 |-- app  
 |   |-- views  
 |   |	 `-- sample.py  
@@ -54,12 +57,12 @@ sample/
 `-- requirements.txt  
 ```
 
-*sample/requirements.txt*  
+*weekend-hackathon/requirements.txt*  
 ```HTML
 Flask==1.1.2
 ```
 
-*sample/app/views/sample.py*  
+*weekend-hackathon/app/views/sample.py*  
 ```Python
 from flask import Blueprint
 
@@ -73,7 +76,7 @@ def index():
 
 ```
 
-*sample/app/__init__.py*  
+*weekend-hackathon/app/\_\_init\_\_.py*  
 ```Python
 from flask import Flask
 from app.views.sample import sample
@@ -90,7 +93,7 @@ def _register_blueprint(app):
 
 ```
 
-*sample/app.py*  
+*weekend-hackathon/app.py*  
 
 ```Python
 import app
