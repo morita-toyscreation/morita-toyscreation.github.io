@@ -1,6 +1,6 @@
 Title: [Python] Pelicanのテーマ、プラグイン導入  
-Date: 2020-01-11 00:00  
-Modified: 2020-01-11 00:00  
+Date: 2021-01-11 00:00  
+Modified: 2021-01-11 00:00  
 Category: Tech  
 Tags: トイズクリエイション, ToysCreation, Python, Pelican, GitHub    
 Slug: pelican_in_v20210111  

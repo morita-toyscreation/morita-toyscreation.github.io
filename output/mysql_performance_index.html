@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="./theme/pygments/monokai.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/solid.css">
+
+    <link href="./static/custom.css" rel="stylesheet">
+
+    <link href="https://www.toyscreation.jp/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="ToysCreation Atom">
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55971269-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333">
+
+<meta name="author" content="ToysCreation.Inc morita" />
+<meta name="description" content="[MySQL] MySQLDBチューニング : INDEX編" />
+<meta name="keywords" content="トイズクリエイション, ToysCreation, MySQL, MySQLWorkbench">
+
+
+<meta property="og:site_name" content="ToysCreation"/>
+<meta property="og:title" content="[MySQL] MySQLDBチューニング : INDEX編"/>
+<meta property="og:description" content="[MySQL] MySQLDBチューニング : INDEX編"/>
+<meta property="og:locale" content="ja_JP"/>
+<meta property="og:url" content="./mysql_performance_index.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-01-12 00:00:00+09:00"/>
+<meta property="article:modified_time" content="2021-01-12 00:00:00+09:00"/>
+<meta property="article:author" content="./author/toyscreationinc-morita.html">
+<meta property="article:section" content="Tech"/>
+<meta property="article:tag" content="トイズクリエイション"/>
+<meta property="article:tag" content="ToysCreation"/>
+<meta property="article:tag" content="MySQL"/>
+<meta property="article:tag" content="MySQLWorkbench"/>
+<meta property="og:image" content="./">
+
+  <title>ToysCreation &ndash; [MySQL] MySQLDBチューニング : INDEX編</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href=".">
+        <img src="/images/toyscreation.png" alt="ToysCreation" title="ToysCreation">
+      </a>
+
+      <h1>
+        <a href=".">ToysCreation</a>
+      </h1>
+
+<p>トイズクリエイション</p>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="./pages/about.html#about">
+                  プロフィール
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="./pages/contact.html#contact">
+                  お問い合わせ
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="./pages/portfolio.html#portfolio">
+                  開発実績
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="./pages/service.html#service">
+                  サービス
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href=".">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://www.toyscreation.jp/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="mysql_performance_index">[MySQL] MySQLDBチューニング : INDEX編</h1>
+    <p>
+      Posted on 2021年1月12日 in <a href="./category/tech.html">Tech</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <h2>概要</h2>
+<p>MySQLWorkbenchのPerformance Reports機能を用いてDB INDEXの調査と確認、設定を行うマニュアルです。</p>
+<h3>前提条件</h3>
+<ul>
+<li>MySQLDB限定である(mariaDBは未検証)</li>
+<li>MySQLWorkbenchがインストールされていること</li>
+</ul>
+<h3>環境</h3>
+<ul>
+<li>mysqld: Ver 5.6.23 for Linux on x86_64 (MySQL Community Server (GPL))</li>
+<li>MySQLworkbench : v6.2.4</li>
+</ul>
+<h3>参照資料</h3>
+<ul>
+<li>PerformanceReportsについての資料</li>
+<li>http://www.slideshare.net/yoyamasaki/20131110-tuning-onmysql56</li>
+<li>DBチューニング入門(INDEX関連)</li>
+<li>http://sssslide.com/www.slideshare.net/infinite_loop/mysql-indexexplain</li>
+</ul>
+<hr>
+<h2>事前準備</h2>
+<ul>
+<li>MySQLの設定変更</li>
+<li>MySQLWorkbenchのPerformanceReportsを有効化</li>
+</ul>
+<h3>1.MySQLの準備</h3>
+<h4>1.DB設定の変更</h4>
+<ul>
+<li>APIが発行するSQLをログから確認のするためMySQLの設定を記述する。</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ vim /etc/my.cnf
+</code></pre></div>
+
+<p>設定内容は以下の通りになります。</p>
+<div class="highlight"><pre><span></span><code><span class="k">[mysqld]</span>
+<span class="c1"># debug</span>
+<span class="na">slow_query_log</span><span class="o">=</span><span class="s">1 #スロークエリログ出力有効化</span>
+<span class="na">slow_query_log_file</span><span class="o">=</span><span class="s">/var/log/mysqld-slow.log #スロークエリログファイル名</span>
+<span class="na">long_query_time</span><span class="o">=</span><span class="s">2 #スロークエリとして認識させる時間[秒]</span>
+<span class="na">general_log</span><span class="o">=</span><span class="s">1</span>
+<span class="na">general_log_file</span><span class="o">=</span><span class="s">/var/log/mysqld-query.log</span>
+<span class="na">log-queries-not-using-indexes</span> <span class="o">=</span> <span class="s">1</span>
+</code></pre></div>
+
+<h3>2.MySQLWorkBenchの準備</h3>
+<h4>1. PerformanceReportsをインストール</h4>
+<ul>
+<li>
+<p>MySQLWorkBenchを起動してPerformanceReportsを有効にする。
+(※有効にするとPerformancereportsが利用するDB "sys"が作成される)</p>
+</li>
+<li>
+<p>メニュー "Management" をクリック</p>
+</li>
+<li>項目 "Performance schema Setup" をクリック。
+  機能を利用するための有効化(インストールっぽい)するボタンがあるので、すべて有効になるようにクリック。</li>
+<li>画面中央のバー "Performance schema"のバーが"Server default"に変更する。
+  (詳細は下記の画像参照) 
+<img alt="WB_001" src="../images/mysql_performance_index/WB_001.jpg"></li>
+</ul>
+<h3>APIが発行するSQL Query調査, EXLPAIN確認, DBschema変更</h3>
+<p>調査を始める前の注意点として、事前にPerformanceReportsのLogをクリアしておく必要がある。<br>
+クリア方法については '99.PerformanceReports(Log)のリセット' を参照して下さい。</p>
+<h4>1. INDEXが最適化されていないQueryの調査</h4>
+<ol>
+<li>調査対象のAPIを実行する。(Queryを発行する)</li>
+<li>MySQLWorkbenchより　メニュー "Management" -&gt; "PerformanceReposts" を開く</li>
+<li>項目 "High Cost SQL statements" -&gt; "Full Scan Tables"の項目を開く</li>
+</ol>
+<p>"Full Scan Tables"ではQuery単位でINDEXが最適化されていないことが確認できる。</p>
+<p><img alt="WB_002" src="../images/mysql_performance_index/WB_002.jpg"></p>
+<ul>
+<li>INDEXが利用されていないテーブル単位で確認する場合は以下の通り</li>
+<li>MySQLWorkbenchより　メニュー "Management" -&gt; "PerformanceReposts" を開く</li>
+<li>
+<p>項目 "Database schema statements" -&gt; "Tables With Full Scan Tables"の項目を開く</p>
+</li>
+<li>
+<p>カラムの"Object"が特定のQueryによってINDEXが利用されていないテーブルとなる。</p>
+</li>
+</ul>
+<p>(詳細画面)
+<img alt="WB_003" src="../images/mysql_performance_index/WB_003.jpg"></p>
+<ul>
+<li>この項目で表示されているインデックスは利用されていないインデックスキーとなります。  表示の詳細は以下の通りです。</li>
+<li>Schema : データベース</li>
+<li>Object : テーブル</li>
+<li>Index : INDEXキー</li>
+</ul>
+<h4>2. EXPLAIN確認</h4>
+<ul>
+<li>ログより実際に発行されているQueryを確認する。ログは以下の通りです。</li>
+<li>/var/log/mysqld-query.log</li>
+<li>Queryの中で発行されているSQL文をコピーしてMySQLWorkbench上に書きEXPALINを実行する。</li>
+</ul>
+<p>(詳細画面)
+<img alt="WB_004" src="../images/mysql_performance_index/WB_004.jpg"></p>
+<h4>3. DBschema変更(INDEX設定)</h4>
+<ul>
+<li>変更したいテーブルにカーソルを合わせて、スパナマークのボタンをクリック。(設定画面を開く)</li>
+<li>画面下部にある"Indexes"タブをクリックして、INDEX設定画面よりINDEXを設定する。</li>
+</ul>
+<p>(詳細画面)
+<img alt="WB_005" src="../images/mysql_performance_index/WB_005.jpg"></p>
+<ul>
+<li>設定が完了したらもう一度EXPLAINよりQueryを確認して想定通りに動作しているか確認する。</li>
+</ul>
+<h4>4.不要のINDEX調査</h4>
+<ul>
+<li>実際にINDEXが設定されているが利用されていない場合の調査方法は以下の通りになります。</li>
+<li>
+<p>事前にPerformanceReportsのLogをクリアしておく必要がある。<br>
+  クリア方法については '99.PerformanceReports(Log)のリセット' を参照して下さい。  </p>
+</li>
+<li>
+<p>全APIを実行する。</p>
+</li>
+<li>MySQLWorkbenchより　メニュー "Management" -&gt; "PerformanceReposts" を開く</li>
+<li>項目 "Database schema statements" -&gt; "Unset Indexes"の項目を開く</li>
+</ul>
+<p>(詳細画面)
+<img alt="WB_006" src="../images/mysql_performance_index/WB_006.jpg"></p>
+<h3>99.PerformanceReports(Log)のリセット</h3>
+<ol>
+<li>メニュー "Management" をクリック</li>
+<li>項目 "Performance schema Setup" をクリック。</li>
+<li>"Clear Event Tables"をクリックしてクリアする。  </li>
+</ol>
+<p>(詳細画面)
+<img alt="WB_007" src="../images/mysql_performance_index/WB_007.jpg"></p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/toizukurieishiyon.html">トイズクリエイション</a>
+      <a href="./tag/toyscreation.html">ToysCreation</a>
+      <a href="./tag/mysql.html">MySQL</a>
+      <a href="./tag/mysqlworkbench.html">MySQLWorkbench</a>
+    </p>
+  </div>
+
+  <div class="center social-share">
+    <p>Like this article? Share it with your friends!</p>
+    <div class="addthis_native_toolbox"></div>
+    <div class="addthis_sharing_toolbox"></div>
+    <div class="addthis_inline_share_toolbox"></div>
+  </div>
+
+
+    <div class="addthis_relatedposts_inline"></div>
+
+
+</article>
+
+    <footer>
+<p>&copy; 2014-2021 </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aae0f0fc99eb630" async="async"></script>
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " ToysCreation ",
+  "url" : ".",
+  "image": "/images/toyscreation.png",
+  "description": "ToysCreation.Inc's トイズクリエイションはWEBサイト、スマートフォン、ソーシャルゲームの受託開発・自社製品開発を行うクリエイティブ・プロダクションです。"
+}
+</script>
+
+
+</body>
+</html>
