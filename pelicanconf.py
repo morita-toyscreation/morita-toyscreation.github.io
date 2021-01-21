@@ -57,8 +57,11 @@ HOME_HIDE_TAGS = True
 # SOCIAL = (('linkedin', '#'),
 #           ('github', '#'),
 #           ('google', '#'),
-#           ('twitter', '#'),
+#           ('twitter', 'gakushi0130'),
 #           ('rss', '#'))
+
+SOCIAL = (('twitter', 'https://twitter.com/gakushi0130'),
+          ('rss', 'https://qiita.com/morita-toyscreation'))
 
 MENUITEMS = (('Archives', '/archives.html'),
              ('Categories', '/categories.html'),
