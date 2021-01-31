@@ -10,6 +10,7 @@ Order: 3
 
 ## 自社製品開発
 
+### [週末ハッカソン](/weekend_hackathon_release.html#weekend_hackathon_release)
 ### [ストーリー型将棋指し育成ゲーム「棋士プロ〜将棋めし編〜」](/kishipro.html#kishipro)
 
 ## 受託開発
