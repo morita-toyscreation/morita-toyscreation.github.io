@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.toyscreation.jp/</loc>
-<lastmod>2021-01-31T16:51:25-00:00</lastmod>
+<lastmod>2021-01-31T16:55:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/tags.html</loc>
-<lastmod>2021-01-31T16:51:25-00:00</lastmod>
+<lastmod>2021-01-31T16:55:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/categories.html</loc>
-<lastmod>2021-01-31T16:51:25-00:00</lastmod>
+<lastmod>2021-01-31T16:55:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/authors.html</loc>
-<lastmod>2021-01-31T16:51:25-00:00</lastmod>
+<lastmod>2021-01-31T16:55:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/archives.html</loc>
-<lastmod>2021-01-31T16:51:25-00:00</lastmod>
+<lastmod>2021-01-31T16:55:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -64,6 +64,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <lastmod>2018-03-25T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://www.toyscreation.jp/qiita_20210124.html</loc>
+<lastmod>2021-01-24T00:00:00+09:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
 </url>
 
 <url>
@@ -201,28 +208,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.toyscreation.jp/category/tech.html</loc>
-<lastmod>2021-01-23T00:00:00+09:19</lastmod>
+<lastmod>2021-01-24T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/tag/toizukurieishiyon.html</loc>
-<lastmod>2021-01-23T00:00:00+09:19</lastmod>
+<lastmod>2021-01-24T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/tag/toyscreation.html</loc>
-<lastmod>2021-01-23T00:00:00+09:19</lastmod>
+<lastmod>2021-01-24T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/tag/python.html</loc>
-<lastmod>2021-01-23T00:00:00+09:19</lastmod>
+<lastmod>2021-01-24T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://www.toyscreation.jp/tag/tweepy.html</loc>
+<lastmod>2021-01-24T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -299,13 +313,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.toyscreation.jp/tag/twitter.html</loc>
-<lastmod>2021-01-18T00:00:00+09:19</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://www.toyscreation.jp/tag/tweepy.html</loc>
 <lastmod>2021-01-18T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
@@ -439,7 +446,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.toyscreation.jp/author/toyscreationinc-morita.html</loc>
-<lastmod>2021-01-23T00:00:00+09:19</lastmod>
+<lastmod>2021-01-24T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
