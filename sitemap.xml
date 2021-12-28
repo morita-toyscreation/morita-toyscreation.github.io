@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.toyscreation.jp/</loc>
-<lastmod>2021-01-31T17:05:53-00:00</lastmod>
+<lastmod>2021-12-28T10:39:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/tags.html</loc>
-<lastmod>2021-01-31T17:05:53-00:00</lastmod>
+<lastmod>2021-12-28T10:39:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/categories.html</loc>
-<lastmod>2021-01-31T17:05:53-00:00</lastmod>
+<lastmod>2021-12-28T10:39:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/authors.html</loc>
-<lastmod>2021-01-31T17:05:53-00:00</lastmod>
+<lastmod>2021-12-28T10:39:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://www.toyscreation.jp/archives.html</loc>
-<lastmod>2021-01-31T17:05:53-00:00</lastmod>
+<lastmod>2021-12-28T10:39:26-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -68,13 +68,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://www.toyscreation.jp/qiita_20210124.html</loc>
-<lastmod>2021-01-24T00:00:00+09:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://www.toyscreation.jp/qiita_20210125.html</loc>
 <lastmod>2021-01-24T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -249,22 +242,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://www.toyscreation.jp/tag/scheduler.html</loc>
-<lastmod>2021-01-24T00:00:00+09:19</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
 <loc>https://www.toyscreation.jp/tag/gcp.html</loc>
-<lastmod>2021-01-24T00:00:00+09:19</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://www.toyscreation.jp/tag/functions.html</loc>
-<lastmod>2021-01-24T00:00:00+09:19</lastmod>
+<lastmod>2021-01-23T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
