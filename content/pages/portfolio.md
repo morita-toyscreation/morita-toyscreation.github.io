@@ -10,7 +10,7 @@ Order: 3
 
 ## 自社製品開発
 
-### [週末ハッカソン](/weekend_hackathon_release.html#weekend_hackathon_release)
+### [プロニチ（プログラミング新聞）](https://pronichi.com/)
 ### [ストーリー型将棋指し育成ゲーム「棋士プロ〜将棋めし編〜」](/kishipro.html#kishipro)
 
 ## 受託開発
@@ -28,6 +28,39 @@ Order: 3
 }
 </style>
 
+
+<div class="works">
+
+<h3>上場ゲーム企業の売上管理システム</h3>
+
+<p>
+スマートフォンゲームの各プラットフォーム売上を集計し上場ゲーム企業の 決算に使う売上、及び帳票作成をシステム化しました。 大部分を設計〜開発まで裁量をもって開発しまし た。
+データベースにBigQuery、インフラはGCPを利用しCloudRun、 CloudFunctionを利用しサーバーレス環境にて実現しました。
+</p>
+
+<table>
+    <tr>
+        <th style="width: 20%;">企業名</th>
+        <td style="width: 80%;">Klab株式会社 </td>
+    </tr>
+    <tr>
+        <th style="width: 20%;">参考サイト</th>
+        <td style="width: 80%;">社内ツール</td>
+    </tr>
+    <tr>
+        <th style="width: 20%;">作業期間</th>
+        <td style="width: 80%;">18ヶ月</td>
+    </tr>
+    <tr>
+        <th style="width: 20%;">仕様技術</th>
+        <td style="width: 80%;">
+プログラム言語：Python/C# フレームワーク：Flask  <br />
+DB：BigQuery インフラ：GCP ツール：Git/GitHub
+        </td>
+    </tr>
+</table>
+
+</div>
 
 <div class="works">
 
