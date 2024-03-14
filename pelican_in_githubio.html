@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow" />
 
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 
@@ -17,19 +17,29 @@
           href="./theme/pygments/monokai.min.css">
 
 
+
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/fontawesome.css">
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/brands.css">
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/solid.css">
 
-    <link href="./static/custom.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/static/custom.css">
 
-    <link href="https://www.toyscreation.jp/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="ToysCreation Atom">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#333">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#333">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Microsoft EDGE -->
+  <meta name="msapplication-TileColor" content="#333">
+
+  <link href="https://www.toyscreation.jp/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="ToysCreation Atom">
 
 
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-
-<!-- Google Analytics -->
 <script type="text/javascript">
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -39,114 +49,113 @@
   ga('create', 'UA-55971269-1', 'auto');
   ga('send', 'pageview');
 </script>
-<!-- End Google Analytics -->
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#333">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#333">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Microsoft EDGE -->
-    <meta name="msapplication-TileColor" content="#333">
+
+ 
 
 <meta name="author" content="ToysCreation.Inc morita" />
 <meta name="description" content="[Python] PelicanとGithub Pagesで簡単ブログ作成" />
 <meta name="keywords" content="トイズクリエイション, ToysCreation, Python, Pelican, GitHub">
 
 
-<meta property="og:site_name" content="ToysCreation"/>
-<meta property="og:title" content="[Python] PelicanとGithub Pagesで簡単ブログ作成"/>
-<meta property="og:description" content="[Python] PelicanとGithub Pagesで簡単ブログ作成"/>
-<meta property="og:locale" content="ja_JP"/>
-<meta property="og:url" content="./pelican_in_githubio.html"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2019-01-02 00:00:00+09:00"/>
-<meta property="article:modified_time" content="2019-01-02 00:00:00+09:00"/>
-<meta property="article:author" content="./author/toyscreationinc-morita.html">
-<meta property="article:section" content="Tech"/>
-<meta property="article:tag" content="トイズクリエイション"/>
-<meta property="article:tag" content="ToysCreation"/>
-<meta property="article:tag" content="Python"/>
-<meta property="article:tag" content="Pelican"/>
-<meta property="article:tag" content="GitHub"/>
-<meta property="og:image" content="./">
+  <meta property="og:site_name" content="ToysCreation"/>
+  <meta property="og:title" content="[Python] PelicanとGithub Pagesで簡単ブログ作成"/>
+  <meta property="og:description" content="[Python] PelicanとGithub Pagesで簡単ブログ作成"/>
+  <meta property="og:locale" content="ja_JP"/>
+  <meta property="og:url" content="./pelican_in_githubio.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2019-01-02 00:00:00+09:00"/>
+  <meta property="article:modified_time" content="2019-01-02 00:00:00+09:00"/>
+  <meta property="article:author" content="./author/toyscreationinc-morita.html">
+  <meta property="article:section" content="Tech"/>
+  <meta property="article:tag" content="トイズクリエイション"/>
+  <meta property="article:tag" content="ToysCreation"/>
+  <meta property="article:tag" content="Python"/>
+  <meta property="article:tag" content="Pelican"/>
+  <meta property="article:tag" content="GitHub"/>
+  <meta property="og:image" content="./">
 
   <title>ToysCreation &ndash; [Python] PelicanとGithub Pagesで簡単ブログ作成</title>
 
+
 </head>
 <body class="light-theme">
-  <aside>
-    <div>
-      <a href=".">
-        <img src="/images/toyscreation.png" alt="ToysCreation" title="ToysCreation">
-      </a>
 
-      <h1>
-        <a href=".">ToysCreation</a>
-      </h1>
+<aside>
+  <div>
+    <a href="./">
+      <img src="/images/toyscreation.png" alt="ToysCreation" title="ToysCreation">
+    </a>
 
-<p>トイズクリエイション</p>
+    <h1>
+      <a href="./">ToysCreation</a>
+    </h1>
 
-      <nav>
-        <ul class="list">
+    <p>トイズクリエイション</p>
 
-
-              <li>
-                <a target="_self"
-                   href="./pages/about.html#about">
-                  プロフィール
-                </a>
-              </li>
-              <li>
-                <a target="_self"
-                   href="./pages/contact.html#contact">
-                  お問い合わせ
-                </a>
-              </li>
-              <li>
-                <a target="_self"
-                   href="./pages/portfolio.html#portfolio">
-                  開発実績
-                </a>
-              </li>
-              <li>
-                <a target="_self"
-                   href="./pages/service.html#service">
-                  サービス
-                </a>
-              </li>
-
-        </ul>
-      </nav>
-
-      <ul class="social">
-          <li>
-            <a  class="sc-twitter" href="https://twitter.com/gakushi0130" target="_blank">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a  class="sc-rss" href="https://qiita.com/morita-toyscreation" target="_blank">
-              <i class="fas fa-rss"></i>
-            </a>
-          </li>
-      </ul>
-    </div>
-
-  </aside>
-  <main>
 
     <nav>
-      <a href=".">Home</a>
+      <ul class="list">
 
-      <a href="/archives.html">Archives</a>
-      <a href="/categories.html">Categories</a>
-      <a href="/tags.html">Tags</a>
 
-      <a href="https://www.toyscreation.jp/feeds/all.atom.xml">Atom</a>
+            <li>
+              <a target="_self"
+                 href="./pages/about.html#about">
+                プロフィール
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="./pages/contact.html#contact">
+                お問い合わせ
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="./pages/portfolio.html#portfolio">
+                開発実績
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="./pages/service.html#service">
+                サービス
+              </a>
+            </li>
 
+      </ul>
     </nav>
+
+    <ul class="social">
+      <li>
+        <a class="sc-twitter"
+           href="https://twitter.com/ToysCreation"
+           target="_blank">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-rss"
+           href="https://qiita.com/morita-toyscreation"
+           target="_blank">
+          <i class="fa-solid fa-rss"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</aside>
+  <main>
+
+<nav>
+  <a href="./">Home</a>
+
+  <a href="/archives.html">Archives</a>
+  <a href="/categories.html">Categories</a>
+  <a href="/tags.html">Tags</a>
+
+  <a href="https://www.toyscreation.jp/feeds/all.atom.xml">Atom</a>
+
+</nav>
 
 <article class="single">
   <header>
@@ -192,8 +201,8 @@
 <span class="p">&gt;</span> <span class="n">What</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="n">title</span> <span class="n">of</span> <span class="n">this</span> <span class="n">web</span> <span class="n">site</span><span class="p">?</span> <span class="n">Toyscreation</span> <span class="n">Blog</span>
 <span class="p">&gt;</span> <span class="n">Who</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="n">author</span> <span class="n">of</span> <span class="n">this</span> <span class="n">web</span> <span class="n">site</span><span class="p">?</span> <span class="n">morita-toyscreation</span>
 <span class="p">&gt;</span> <span class="n">What</span> <span class="n">will</span> <span class="n">be</span> <span class="n">the</span> <span class="k">default</span> <span class="n">language</span> <span class="n">of</span> <span class="n">this</span> <span class="n">web</span> <span class="n">site</span><span class="p">?</span> <span class="no">[ja]</span>
-<span class="p">&gt;</span> <span class="k">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">specify</span> <span class="n">a</span> <span class="n">URL</span> <span class="n">prefix</span><span class="p">?</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span> <span class="n">http</span><span class="err">:</span><span class="p">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span>   <span class="p">(</span><span class="n">Y</span><span class="p">/</span><span class="n">n</span><span class="p">)</span> <span class="n">Y</span>
-<span class="p">&gt;</span> <span class="n">What</span> <span class="n">is</span> <span class="n">your</span> <span class="n">URL</span> <span class="n">prefix</span><span class="p">?</span> <span class="p">(</span><span class="n">see</span> <span class="n">above</span> <span class="n">example</span><span class="p">;</span> <span class="n">no</span> <span class="n">trailing</span> <span class="n">slash</span><span class="p">)</span> <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">morita-toyscreation</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span>
+<span class="p">&gt;</span> <span class="k">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">specify</span> <span class="n">a</span> <span class="n">URL</span> <span class="n">prefix</span><span class="p">?</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span> <span class="n">http</span><span class="p">://</span><span class="n">example</span><span class="p">.</span><span class="n">com</span>   <span class="p">(</span><span class="n">Y</span><span class="p">/</span><span class="n">n</span><span class="p">)</span> <span class="n">Y</span>
+<span class="p">&gt;</span> <span class="n">What</span> <span class="n">is</span> <span class="n">your</span> <span class="n">URL</span> <span class="n">prefix</span><span class="p">?</span> <span class="p">(</span><span class="n">see</span> <span class="n">above</span> <span class="n">example</span><span class="p">;</span> <span class="n">no</span> <span class="n">trailing</span> <span class="n">slash</span><span class="p">)</span> <span class="n">https</span><span class="p">://</span><span class="n">morita-toyscreation</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span>
 <span class="p">&gt;</span> <span class="k">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">enable</span> <span class="n">article</span> <span class="n">pagination</span><span class="p">?</span> <span class="p">(</span><span class="n">Y</span><span class="p">/</span><span class="n">n</span><span class="p">)</span> <span class="n">Y</span>
 <span class="p">&gt;</span> <span class="n">How</span> <span class="n">many</span> <span class="n">articles</span> <span class="n">per</span> <span class="n">page</span> <span class="k">do</span> <span class="n">you</span> <span class="n">want</span><span class="p">?</span> <span class="p">[</span><span class="n">10</span><span class="p">]</span>
 <span class="p">&gt;</span> <span class="n">What</span> <span class="n">is</span> <span class="n">your</span> <span class="n">time</span> <span class="n">zone</span><span class="p">?</span> <span class="p">[</span><span class="n">Europe</span><span class="p">/</span><span class="n">Paris</span><span class="p">]</span> <span class="n">Asia</span><span class="p">/</span><span class="n">Tokyo</span>
@@ -217,9 +226,9 @@
 <p><strong>記事の作成</strong></p>
 <div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">vi</span> <span class="n">content</span><span class="p">/</span><span class="n">keyboard-review</span><span class="p">.</span><span class="nb">md</span>
 
-<span class="n">Title</span><span class="err">:</span><span class="n">My</span> <span class="n">First</span> <span class="n">Review</span>
-<span class="n">Date</span><span class="err">:</span> <span class="n">2018</span><span class="p">-</span><span class="n">03</span><span class="p">-</span><span class="n">06</span> <span class="n">09</span><span class="err">:</span><span class="n">00</span>
-<span class="n">Category</span><span class="err">:</span> <span class="n">Review</span>
+<span class="n">Title</span><span class="p">:</span><span class="n">My</span> <span class="n">First</span> <span class="n">Review</span>
+<span class="n">Date</span><span class="p">:</span> <span class="n">2018</span><span class="p">-</span><span class="n">03</span><span class="p">-</span><span class="n">06</span> <span class="n">09</span><span class="p">:</span><span class="n">00</span>
+<span class="n">Category</span><span class="p">:</span> <span class="n">Review</span>
 
 <span class="n">Following</span> <span class="n">is</span> <span class="n">a</span> <span class="n">review</span> <span class="n">of</span> <span class="n">my</span> <span class="n">favorite</span> <span class="n">mechanical</span> <span class="n">keyboard</span><span class="p">.</span>
 </code></pre></div>
@@ -281,18 +290,14 @@ https://morita-toyscreation.github.io/
     <div class="addthis_relatedposts_inline"></div>
 
 
+
 </article>
 
-    <footer>
-<p>&copy; 2014-2021 </p>
+<footer>
+<p>&copy; 2014-2024 </p>
 <p>
 Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
-</p>    </footer>
-  </main>
-
-
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aae0f0fc99eb630" async="async"></script>
-
+</p></footer>  </main>
 
 <script type="application/ld+json">
 {
@@ -303,8 +308,7 @@ Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a 
   "image": "/images/toyscreation.png",
   "description": "ToysCreation.Inc's トイズクリエイションはWEBサイト、スマートフォン、ソーシャルゲームの受託開発・自社製品開発を行うクリエイティブ・プロダクションです。"
 }
-</script>
-
+</script><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aae0f0fc99eb630" async="async"></script>
 
 </body>
 </html>
