@@ -39,7 +39,7 @@ I18N_TEMPLATES_LANG = 'ja'
 #     'slug': 'by-sa'
 # }
 
-COPYRIGHT_YEAR = "2014-2021"
+COPYRIGHT_YEAR = "2014-2024"
 
 DEFAULT_PAGINATION = 10
 
@@ -60,7 +60,7 @@ HOME_HIDE_TAGS = True
 #           ('twitter', 'gakushi0130'),
 #           ('rss', '#'))
 
-SOCIAL = (('twitter', 'https://twitter.com/gakushi0130'),
+SOCIAL = (('twitter', 'https://twitter.com/ToysCreation'),
           ('rss', 'https://qiita.com/morita-toyscreation'))
 
 MENUITEMS = (('Archives', '/archives.html'),

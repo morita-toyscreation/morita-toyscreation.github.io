@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow" />
 
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 
@@ -17,19 +17,29 @@
           href="./theme/pygments/monokai.min.css">
 
 
+
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/fontawesome.css">
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/brands.css">
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/solid.css">
 
-    <link href="./static/custom.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/static/custom.css">
 
-    <link href="https://www.toyscreation.jp/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="ToysCreation Atom">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#333">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#333">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Microsoft EDGE -->
+  <meta name="msapplication-TileColor" content="#333">
+
+  <link href="https://www.toyscreation.jp/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="ToysCreation Atom">
 
 
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-
-<!-- Google Analytics -->
 <script type="text/javascript">
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -39,114 +49,113 @@
   ga('create', 'UA-55971269-1', 'auto');
   ga('send', 'pageview');
 </script>
-<!-- End Google Analytics -->
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#333">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#333">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Microsoft EDGE -->
-    <meta name="msapplication-TileColor" content="#333">
+
+ 
 
 <meta name="author" content="ToysCreation.Inc morita" />
 <meta name="description" content="[Python] DockerにPython + Flask環境を構築" />
 <meta name="keywords" content="トイズクリエイション, ToysCreation, Docker, Python, Flask">
 
 
-<meta property="og:site_name" content="ToysCreation"/>
-<meta property="og:title" content="[Python] DockerにPython + Flask環境を構築"/>
-<meta property="og:description" content="[Python] DockerにPython + Flask環境を構築"/>
-<meta property="og:locale" content="ja_JP"/>
-<meta property="og:url" content="./python_in_docker_install.html"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2021-01-15 00:00:00+09:00"/>
-<meta property="article:modified_time" content="2021-01-15 00:00:00+09:00"/>
-<meta property="article:author" content="./author/toyscreationinc-morita.html">
-<meta property="article:section" content="Tech"/>
-<meta property="article:tag" content="トイズクリエイション"/>
-<meta property="article:tag" content="ToysCreation"/>
-<meta property="article:tag" content="Docker"/>
-<meta property="article:tag" content="Python"/>
-<meta property="article:tag" content="Flask"/>
-<meta property="og:image" content="./">
+  <meta property="og:site_name" content="ToysCreation"/>
+  <meta property="og:title" content="[Python] DockerにPython + Flask環境を構築"/>
+  <meta property="og:description" content="[Python] DockerにPython + Flask環境を構築"/>
+  <meta property="og:locale" content="ja_JP"/>
+  <meta property="og:url" content="./python_in_docker_install.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2021-01-15 00:00:00+09:00"/>
+  <meta property="article:modified_time" content="2021-01-15 00:00:00+09:00"/>
+  <meta property="article:author" content="./author/toyscreationinc-morita.html">
+  <meta property="article:section" content="Tech"/>
+  <meta property="article:tag" content="トイズクリエイション"/>
+  <meta property="article:tag" content="ToysCreation"/>
+  <meta property="article:tag" content="Docker"/>
+  <meta property="article:tag" content="Python"/>
+  <meta property="article:tag" content="Flask"/>
+  <meta property="og:image" content="./">
 
   <title>ToysCreation &ndash; [Python] DockerにPython + Flask環境を構築</title>
 
+
 </head>
 <body class="light-theme">
-  <aside>
-    <div>
-      <a href=".">
-        <img src="/images/toyscreation.png" alt="ToysCreation" title="ToysCreation">
-      </a>
 
-      <h1>
-        <a href=".">ToysCreation</a>
-      </h1>
+<aside>
+  <div>
+    <a href="./">
+      <img src="/images/toyscreation.png" alt="ToysCreation" title="ToysCreation">
+    </a>
 
-<p>トイズクリエイション</p>
+    <h1>
+      <a href="./">ToysCreation</a>
+    </h1>
 
-      <nav>
-        <ul class="list">
+    <p>トイズクリエイション</p>
 
-
-              <li>
-                <a target="_self"
-                   href="./pages/about.html#about">
-                  プロフィール
-                </a>
-              </li>
-              <li>
-                <a target="_self"
-                   href="./pages/contact.html#contact">
-                  お問い合わせ
-                </a>
-              </li>
-              <li>
-                <a target="_self"
-                   href="./pages/portfolio.html#portfolio">
-                  開発実績
-                </a>
-              </li>
-              <li>
-                <a target="_self"
-                   href="./pages/service.html#service">
-                  サービス
-                </a>
-              </li>
-
-        </ul>
-      </nav>
-
-      <ul class="social">
-          <li>
-            <a  class="sc-twitter" href="https://twitter.com/gakushi0130" target="_blank">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a  class="sc-rss" href="https://qiita.com/morita-toyscreation" target="_blank">
-              <i class="fas fa-rss"></i>
-            </a>
-          </li>
-      </ul>
-    </div>
-
-  </aside>
-  <main>
 
     <nav>
-      <a href=".">Home</a>
+      <ul class="list">
 
-      <a href="/archives.html">Archives</a>
-      <a href="/categories.html">Categories</a>
-      <a href="/tags.html">Tags</a>
 
-      <a href="https://www.toyscreation.jp/feeds/all.atom.xml">Atom</a>
+            <li>
+              <a target="_self"
+                 href="./pages/about.html#about">
+                プロフィール
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="./pages/contact.html#contact">
+                お問い合わせ
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="./pages/portfolio.html#portfolio">
+                開発実績
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="./pages/service.html#service">
+                サービス
+              </a>
+            </li>
 
+      </ul>
     </nav>
+
+    <ul class="social">
+      <li>
+        <a class="sc-twitter"
+           href="https://twitter.com/ToysCreation"
+           target="_blank">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-rss"
+           href="https://qiita.com/morita-toyscreation"
+           target="_blank">
+          <i class="fa-solid fa-rss"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</aside>
+  <main>
+
+<nav>
+  <a href="./">Home</a>
+
+  <a href="/archives.html">Archives</a>
+  <a href="/categories.html">Categories</a>
+  <a href="/tags.html">Tags</a>
+
+  <a href="https://www.toyscreation.jp/feeds/all.atom.xml">Atom</a>
+
+</nav>
 
 <article class="single">
   <header>
@@ -170,23 +179,23 @@ WEBサイトを作ろうと思いDockerにPython + Flask環境を構築した</p
 NEXT STEP を押していき動作確認  </p>
 <p><strong>Python + Flask環境</strong>    </p>
 <p>Dockerfile  </p>
-<div class="highlight"><pre><span></span><code><span class="k">FROM</span> <span class="s">python:3.7.4</span>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.7.4</span>
 
-<span class="k">WORKDIR</span><span class="s"> /app</span>
-<span class="k">ADD</span> . /app
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<span class="k">ADD</span><span class="w"> </span>.<span class="w"> </span>/app
 
-<span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> apt-get clean<span class="p">;</span>
+<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>clean<span class="p">;</span>
 
-<span class="k">RUN</span> pip install -r requirements.txt
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 
-<span class="k">ENV</span> <span class="nv">TZ</span> <span class="o">=</span> <span class="s2">&quot;Asia/Tokyo&quot;</span>
-<span class="k">ENV</span> FLASK_APP /app/app.py
-<span class="k">ENV</span> PYTHONPATH <span class="nv">$PYTHONPATH</span>:/app
+<span class="k">ENV</span><span class="w"> </span><span class="nv">TZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Asia/Tokyo&quot;</span>
+<span class="k">ENV</span><span class="w"> </span>FLASK_APP<span class="w"> </span>/app/app.py
+<span class="k">ENV</span><span class="w"> </span>PYTHONPATH<span class="w"> </span><span class="nv">$PYTHONPATH</span>:/app
 
-<span class="k">ENV</span> PORT <span class="m">8080</span>
-<span class="k">EXPOSE</span><span class="s"> 8080</span>
+<span class="k">ENV</span><span class="w"> </span>PORT<span class="w"> </span><span class="m">8080</span>
+<span class="k">EXPOSE</span><span class="w"> </span><span class="s">8080</span>
 
-<span class="k">CMD</span> <span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;app.py&quot;</span><span class="p">]</span>
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;app.py&quot;</span><span class="p">]</span>
 </code></pre></div>
 
 <p>サンプル用アプリ<br>
@@ -242,11 +251,11 @@ NEXT STEP を押していき動作確認  </p>
 </code></pre></div>
 
 <p><strong>Docker ビルド</strong></p>
-<div class="highlight"><pre><span></span><code>$ docker build -t weekend-hackathon .
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>weekend-hackathon<span class="w"> </span>.
 </code></pre></div>
 
 <p><strong>Flask起動</strong></p>
-<div class="highlight"><pre><span></span><code>$ docker run --name weekend-hackathon -p <span class="m">8080</span>:8080 -v ~/Sites/weekend-hackathon/:/app -it --rm weekend-hackathon
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>weekend-hackathon<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span>-v<span class="w"> </span>~/Sites/weekend-hackathon/:/app<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>weekend-hackathon
 </code></pre></div>
 
 <p>http://localhost:8080/にアクセス<br>
@@ -284,18 +293,14 @@ NEXT STEP を押していき動作確認  </p>
     <div class="addthis_relatedposts_inline"></div>
 
 
+
 </article>
 
-    <footer>
-<p>&copy; 2014-2021 </p>
+<footer>
+<p>&copy; 2014-2024 </p>
 <p>
 Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
-</p>    </footer>
-  </main>
-
-
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aae0f0fc99eb630" async="async"></script>
-
+</p></footer>  </main>
 
 <script type="application/ld+json">
 {
@@ -306,8 +311,7 @@ Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a 
   "image": "/images/toyscreation.png",
   "description": "ToysCreation.Inc's トイズクリエイションはWEBサイト、スマートフォン、ソーシャルゲームの受託開発・自社製品開発を行うクリエイティブ・プロダクションです。"
 }
-</script>
-
+</script><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aae0f0fc99eb630" async="async"></script>
 
 </body>
 </html>
