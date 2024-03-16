@@ -10,7 +10,9 @@ Order: 3
 
 ## 自社製品開発
 
-### [プロニチ（プログラミング新聞）](https://pronichi.com/)
+### [Poker Quiz Post（ポーカークイズポスト）](/poker_quiz_post.html)
+### [プロニチ（プログラミング新聞）](https://prtimes.jp/main/html/rd/p/000000003.000075067.html) ※サービス終了 
+### [Sociagate（ソシャゲート）](https://www.value-press.com/pressrelease/175565) ※サービス終了
 ### [ストーリー型将棋指し育成ゲーム「棋士プロ〜将棋めし編〜」](/kishipro.html#kishipro)
 
 ## 受託開発
@@ -31,6 +33,40 @@ Order: 3
 
 <div class="works">
 
+<h3>マブラヴ：ディメンションズ</h3>
+
+<p>
+DAU100万人を想定した負荷テストの実施、シナリオ〜インフラ構築の作成、その後のパフォーマンスチューニングを行いました。
+また、AWS環境下にてログ基盤、KPI・BI構築を行いました。リリース後は運用、新規機能開発に携わりました。
+</p>
+
+<table>
+    <tr>
+        <th style="width: 20%;">企業名</th>
+        <td style="width: 80%;">株式会社NextNinja</td>
+    </tr>
+    <tr>
+        <th style="width: 20%;">参考サイト</th>
+        <td style="width: 80%;"><a href='https://www.muvluv-dimensions.com/' target='_blank'>公式サイト</a></td>
+    </tr>
+    <tr>
+        <th style="width: 20%;">作業期間</th>
+        <td style="width: 80%;">12ヶ月</td>
+    </tr>
+    <tr>
+        <th style="width: 20%;">仕様技術</th>
+        <td style="width: 80%;">
+プログラム言語：PHP フレームワーク：Slim  <br />
+DB：RDS/Athena インフラ：AWS ツール：Git/GitHub
+        </td>
+    </tr>
+</table>
+
+</div>
+
+
+<div class="works">
+
 <h3>上場ゲーム企業の売上管理システム</h3>
 
 <p>
@@ -45,7 +81,7 @@ Order: 3
     </tr>
     <tr>
         <th style="width: 20%;">参考サイト</th>
-        <td style="width: 80%;">社内ツール</td>
+        <td style="width: 80%;"><a href='https://lovelive-as.bushimo.jp/' target='_blank'>公式サイト</a></td>
     </tr>
     <tr>
         <th style="width: 20%;">作業期間</th>

@@ -23,7 +23,9 @@ Value: morita-toyscreation.github.io
 ![route53](../images/pelican_in_own_domain/route53.png "route53")
 
 **GitHub Pages設定**
-対象ブランチのSettingsにてGitHub Pages設定を行います。
+対象ブランチのSettingsにてGitHub Pages設定を行います。  
+※ Custom domainの設定はPublish毎に行う必要がありました。  
+
 ```ps1
 Custom domain: www.toyscreation.jp
 Enforce HTTPS: チェック

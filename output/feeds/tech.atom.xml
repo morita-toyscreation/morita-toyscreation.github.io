@@ -323,7 +323,8 @@ Route53にてDNSレコード設定を行います。  &lt;/p&gt;
 
 &lt;p&gt;&lt;img alt="route53" src="../images/pelican_in_own_domain/route53.png" title="route53"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;GitHub Pages設定&lt;/strong&gt;
-対象ブランチのSettingsにてGitHub Pages設定を行います。&lt;/p&gt;
+対象ブランチのSettingsにてGitHub Pages設定を行います。&lt;br&gt;
+※ Custom domainの設定はPublish毎に行う必要がありました。  &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Custom&lt;/span&gt; &lt;span class="n"&gt;domain&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toyscreation&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;jp&lt;/span&gt;
 &lt;span class="n"&gt;Enforce&lt;/span&gt; &lt;span class="n"&gt;HTTPS&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;チェック&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
