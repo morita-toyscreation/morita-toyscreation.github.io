@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b40a8b97-fec2-46c3-a38c-6c01a7b894f9" name="変更" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/articles/poker_quiz_post.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/images/poker_quiz_post/key_visual.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/articles/pelican_in_own_domain.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/articles/pelican_in_own_domain.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/pages/portfolio.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/pages/portfolio.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/archives.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/archives.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/author/toyscreationinc-morita.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/author/toyscreationinc-morita.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/author/toyscreationinc-morita2.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/author/toyscreationinc-morita2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/authors.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/authors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/category/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/category/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/feeds/all-ja.atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/feeds/all-ja.atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/feeds/all.atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/feeds/all.atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/feeds/product.atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/feeds/product.atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/feeds/tech.atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/feeds/tech.atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/feeds/toyscreationinc-morita.atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/feeds/toyscreationinc-morita.atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/feeds/toyscreationinc-morita.rss.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/feeds/toyscreationinc-morita.rss.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/index2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pages/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/pages/portfolio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pelican_in_own_domain.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/pelican_in_own_domain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/tag/toizukurieishiyon.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/tag/toizukurieishiyon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/tag/toizukurieishiyon2.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/tag/toizukurieishiyon2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/tag/toyscreation.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/tag/toyscreation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/tag/toyscreation2.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/tag/toyscreation2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/tags.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2daoyaHhAqUjrb3Rd6ptbpTkkl9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/takashimorita/Sites/toyscreation/content/images/poker_quiz_post",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/images/poker_quiz_post" />
+      <recent name="$PROJECT_DIR$/content/articles" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="デフォルトタスク">
+      <changelist id="b40a8b97-fec2-46c3-a38c-6c01a7b894f9" name="変更" comment="" />
+      <created>1710255804432</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710255804432</updated>
+      <workItem from="1710255805651" duration="3183000" />
+      <workItem from="1710375181788" duration="1733000" />
+      <workItem from="1710376925114" duration="29000" />
+      <workItem from="1710376960278" duration="96000" />
+      <workItem from="1710377069422" duration="664000" />
+      <workItem from="1710563318134" duration="4522000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
