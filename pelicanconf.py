@@ -16,7 +16,7 @@ PYGMENTS_STYLE = 'monokai'
 
 ROBOTS = 'index, follow'
 
-THEME = "../pelican-themes/Flex"
+THEME = "themes/custom"
 STATIC_PATHS = ['images', 'static']
 PATH = 'content'
 TIMEZONE = 'Asia/Tokyo'
@@ -39,7 +39,7 @@ I18N_TEMPLATES_LANG = 'ja'
 #     'slug': 'by-sa'
 # }
 
-COPYRIGHT_YEAR = "2014-2024"
+COPYRIGHT_YEAR = "2014-2025"
 
 DEFAULT_PAGINATION = 10
 

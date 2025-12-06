@@ -10,7 +10,6 @@ Order: 3
 
 ## 自社製品開発
 
-### [Poker Quiz Post（ポーカークイズポスト）](/poker_quiz_post.html)
 ### [プロニチ（プログラミング新聞）](https://prtimes.jp/main/html/rd/p/000000003.000075067.html) ※サービス終了 
 ### [Sociagate（ソシャゲート）](https://www.value-press.com/pressrelease/175565) ※サービス終了
 ### [ストーリー型将棋指し育成ゲーム「棋士プロ〜将棋めし編〜」](/kishipro.html#kishipro)
@@ -81,7 +80,7 @@ DB：RDS/Athena インフラ：AWS ツール：Git/GitHub
     </tr>
     <tr>
         <th style="width: 20%;">参考サイト</th>
-        <td style="width: 80%;"><a href='https://lovelive-as.bushimo.jp/' target='_blank'>公式サイト</a></td>
+        <td style="width: 80%;">社内システム</td>
     </tr>
     <tr>
         <th style="width: 20%;">作業期間</th>
@@ -147,7 +146,7 @@ DB：MySQL/Redis インフラ：AWS ツール：Git/GitHub
     </tr>
     <tr>
         <th style="width: 20%;">参考サイト</th>
-        <td style="width: 80%;">社内ツール</td>
+        <td style="width: 80%;">社内システム</td>
     </tr>
     <tr>
         <th style="width: 20%;">作業期間</th>
