@@ -4,63 +4,63 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://www.toyscreation.jp/</loc>
-<lastmod>2025-12-06T11:58:04-00:00</lastmod>
+<loc>/</loc>
+<lastmod>2025-12-06T12:45:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://www.toyscreation.jp/tags.html</loc>
-<lastmod>2025-12-06T11:58:04-00:00</lastmod>
+<loc>/tags.html</loc>
+<lastmod>2025-12-06T12:45:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://www.toyscreation.jp/categories.html</loc>
-<lastmod>2025-12-06T11:58:04-00:00</lastmod>
+<loc>/categories.html</loc>
+<lastmod>2025-12-06T12:45:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://www.toyscreation.jp/authors.html</loc>
-<lastmod>2025-12-06T11:58:04-00:00</lastmod>
+<loc>/authors.html</loc>
+<lastmod>2025-12-06T12:45:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://www.toyscreation.jp/archives.html</loc>
-<lastmod>2025-12-06T11:58:04-00:00</lastmod>
+<loc>/archives.html</loc>
+<lastmod>2025-12-06T12:45:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://www.toyscreation.jp/pages/about.html</loc>
+<loc>/pages/about.html</loc>
 <lastmod>2018-03-25T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.toyscreation.jp/pages/contact.html</loc>
+<loc>/pages/contact.html</loc>
 <lastmod>2018-03-25T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.toyscreation.jp/pages/portfolio.html</loc>
+<loc>/pages/portfolio.html</loc>
 <lastmod>2018-03-25T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.toyscreation.jp/pages/service.html</loc>
+<loc>/pages/service.html</loc>
 <lastmod>2018-03-25T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
