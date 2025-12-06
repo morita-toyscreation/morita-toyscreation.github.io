@@ -24,13 +24,5 @@ $ git push origin pelican
 
 ### Github Pages用デプロイ
 ```
-$ ghp-import output -b master -m "Published."
-```
-
-### masterブランチをPush
-```
-$ git checkout master
-$ git add .
-$ git commit -m "Published."
-$ git push origin master
+$ ghp-import output -b master -m "Published." -p
 ```

@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'ToysCreation.Inc'
-SITEURL = 'https://www.toyscreation.jp'
+SITEURL = ''
 RELATIVE_URLS = True
 SITENAME = 'ToysCreation'
 SITETITLE = SITENAME

@@ -37,7 +37,7 @@
   <!-- Microsoft EDGE -->
   <meta name="msapplication-TileColor" content="#333">
 
-  <link href="https://www.toyscreation.jp/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="ToysCreation Atom">
+  <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="ToysCreation Atom">
 
 
 <script type="text/javascript">
@@ -143,7 +143,7 @@
   <a href="/categories.html">Categories</a>
   <a href="/tags.html">Tags</a>
 
-  <a href="https://www.toyscreation.jp/feeds/all.atom.xml">Atom</a>
+  <a href="/feeds/all.atom.xml">Atom</a>
 
 </nav>
 
@@ -170,6 +170,89 @@
     font-size: 1.2em;
 }
 </style>
+
+<div class="works">
+
+<h3>SNSマルチプラットフォーム対応・大規模データ分析基盤の構築</h3>
+
+<p>
+YouTube・Instagram・TikTok等の外部プラットフォームから取得する膨大なクリエイターデータの収集・統合を行うデータ基盤構築プロジェクトに、エンジニアとして参画。 
+Apache Airflowによるワークフローのオーケストレーションと、Cloud Dataflow (Apache Beam) を用いた分散処理を組み合わせ、
+高スループットかつ耐障害性の高いETLパイプラインを設計・実装しました。 
+また、BigQueryを中心としたDWHの最適化を行い、社内BIツールでのレポート作成やデータ分析業務の高速化・安定化を実現しています。
+<br /><br />
+
+担当工程：  <br />
+- パイプライン設計: Airflowを用いた複雑な依存関係を持つデータ処理フローの自動化と監視体制の構築<br />
+- 分散処理実装: Apache Beamにより、非構造化データのクレンジングおよび正規化処理を並列化・高速化<br />
+- データ活用: 社内向け分析レポートの自動生成およびKPI可視化の推進<br />
+</p>
+
+<table>
+    <tr>
+        <th style="width: 20%;">企業名</th>
+        <td style="width: 80%;">UUUM株式会社 </td>
+    </tr>
+    <tr>
+        <th style="width: 20%;">参考サイト</th>
+        <td style="width: 80%;">社内システム</td>
+    </tr>
+    <tr>
+        <th style="width: 20%;">作業期間</th>
+        <td style="width: 80%;">12ヶ月</td>
+    </tr>
+    <tr>
+        <th style="width: 20%;">仕様技術</th>
+        <td style="width: 80%;">
+プログラム言語：Python<br />
+DB：BigQuery インフラ：GCP ツール：Apache Beam, Airflow DAGs, Git/GitHub
+        </td>
+    </tr>
+</table>
+
+</div>
+
+<div class="works">
+
+<h3>不動産営業支援システム（SFA）の検索基盤高速化とアーキテクチャ刷新</h3>
+
+<p>
+不動産営業担当者が利用する営業支援ツール「イエリーチSales」のフルスタック開発を担当。 
+膨大な顧客データや物件情報を扱う中でボトルネックとなっていた検索機能に対し、
+クエリの最適化やインデックス設計の見直しを実施。
+検索レスポンスを劇的に改善し、営業活動の効率化（DX）に貢献しました。 
+また、機能拡張に耐えうるようシステム全体のリファクタリングを主導し、保守性の高いコードベースへの移行を実現しています。
+<br /><br />
+
+担当工程：  <br />
+検索パフォーマンス改善: OpenSearchを導入し複雑な条件検索におけるDB負荷を軽減し、レスポンスタイムを短縮<br />
+技術的負債の解消: 複雑化した営業ロジックを整理し、拡張性の高い設計へリファクタリング<br />
+フルスタック対応: インフラ設定からUI実装まで、システム全域の課題解決をリード<br />
+</p>
+
+<table>
+    <tr>
+        <th style="width: 20%;">企業名</th>
+        <td style="width: 80%;">株式会社ネクサスエージェント </td>
+    </tr>
+    <tr>
+        <th style="width: 20%;">参考サイト</th>
+        <td style="width: 80%;">社内システム</td>
+    </tr>
+    <tr>
+        <th style="width: 20%;">作業期間</th>
+        <td style="width: 80%;">18ヶ月</td>
+    </tr>
+    <tr>
+        <th style="width: 20%;">仕様技術</th>
+        <td style="width: 80%;">
+プログラム言語：Python フレームワーク：Django <br />
+DB：MySQL,Redis,OpenSearch インフラ：AWS ツール：Git/GitHub
+        </td>
+    </tr>
+</table>
+
+</div>
 
 <div class="works">
 
@@ -206,11 +289,18 @@ DB：RDS/Athena インフラ：AWS ツール：Git/GitHub
 
 <div class="works">
 
-<h3>上場ゲーム企業の売上管理システム</h3>
+<h3>上場ゲーム企業における全社共通・売上データ基盤の構築</h3>
 
 <p>
-スマートフォンゲームの各プラットフォーム売上を集計し上場ゲーム企業の 決算に使う売上、及び帳票作成をシステム化しました。 大部分を設計〜開発まで裁量をもって開発しまし た。
-データベースにBigQuery、インフラはGCPを利用しCloudRun、 CloudFunctionを利用しサーバーレス環境にて実現しました。
+スマートフォンゲームの複数プラットフォームに分散する売上データを集約し、決算業務および経営判断に資するデータ基盤を構築しました。    
+データの収集から加工、DWH（BigQuery）への統合まで、一連のデータパイプラインの設計・開発を主導。  
+GCPのサーバーレスアーキテクチャ（Cloud Run / Cloud Functions）を採用することで、スケーラビリティの確保と運用コストの最適化を実現しています。  
+<br /><br />
+
+担当工程：  <br />
+- 要件定義からアーキテクチャ設計、実装、テストまでのフルサイクルを担当  <br />  
+- BigQueryを中心としたデータウェアハウスの設計  <br />
+- サーバーレス環境でのETL処理の実装  <br />
 </p>
 
 <table>

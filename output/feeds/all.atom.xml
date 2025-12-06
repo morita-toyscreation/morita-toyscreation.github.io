@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>ToysCreation</title><link href="https://www.toyscreation.jp/" rel="alternate"></link><link href="https://www.toyscreation.jp/feeds/all.atom.xml" rel="self"></link><id>https://www.toyscreation.jp/</id><updated>2025-12-06T11:58:04Z</updated><subtitle>トイズクリエイション</subtitle></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>ToysCreation</title><link href="/" rel="alternate"></link><link href="feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2025-12-06T12:45:19Z</updated><subtitle>トイズクリエイション</subtitle></feed>
